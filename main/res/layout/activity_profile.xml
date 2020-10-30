@@ -5,18 +5,26 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center"
+
+    android:padding="20dp"
     tools:context=".profile">
 
+
+
     <TextView
+        android:layout_marginTop="100dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Welcome to ur profile"
         android:textSize="30dp"
         android:layout_gravity="center"
+        android:layout_marginBottom="10dp"
+
         android:backgroundTint="@color/colorPrimary"
 />
     <TextView
+
+        android:layout_gravity="center"
         android:id="@+id/txt"
         android:layout_marginTop="20dp"
         android:layout_width="wrap_content"
@@ -24,6 +32,8 @@
 
         />
 <EditText
+    android:layout_marginTop="20dp"
+    android:layout_gravity="center"
     android:id="@+id/name"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
@@ -37,6 +47,8 @@
 
 
     <Button
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
         android:id="@+id/match"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
