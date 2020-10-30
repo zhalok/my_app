@@ -64,10 +64,10 @@ public class Registration_page extends AppCompatActivity {
                     stringBuilder_name.append(firstname.getText().toString()+" ");
                     stringBuilder_name.append(lastname.getText().toString()+" ");
                     StringBuilder stringBuilder_sub=new StringBuilder();
-                    if(math.isSelected()) stringBuilder_sub.append(math.getText().toString()+"\n");
-                    if(phy.isSelected()) stringBuilder_sub.append(phy.getText().toString()+"\n");
-                    if(chem.isSelected()) stringBuilder_sub.append(chem.getText().toString()+"\n");
-                    if(ict.isSelected()) stringBuilder_sub.append(ict.getText().toString()+"\n");
+                    if(math.isChecked()) stringBuilder_sub.append(math.getText().toString()+"\n");
+                    if(phy.isChecked()) stringBuilder_sub.append(phy.getText().toString()+"\n");
+                    if(chem.isChecked()) stringBuilder_sub.append(chem.getText().toString()+"\n");
+                    if(ict.isChecked()) stringBuilder_sub.append(ict.getText().toString()+"\n");
                     intent.putExtra("name",stringBuilder_name.toString());
                     intent.putExtra("sub",stringBuilder_sub.toString());
                     startActivity(intent);
