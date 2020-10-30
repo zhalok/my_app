@@ -69,6 +69,7 @@ public class Registration_page extends AppCompatActivity {
                     intent.putExtra("name",stringBuilder_name.toString());
                     intent.putExtra("sub",stringBuilder_sub.toString());
                     startActivity(intent);
+                    
 
 
                 }
