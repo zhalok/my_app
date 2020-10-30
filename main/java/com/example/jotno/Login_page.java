@@ -21,21 +21,28 @@ public class Login_page extends AppCompatActivity {
         password=(EditText)findViewById(R.id.pass);
         login=(Button)findViewById(R.id.login);
 
+
+
         login.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                try {
 
-                    Intent intent = new Intent(Login_page.this, profile.class);
-                    String name = username.getText().toString();
-                    intent.putExtra("name",name);
-                    startActivity(intent);
+           public void onClick(View view) {
+
+                  if(username.getText().toString().matches("")) {
+                      Toast.makeText(Login_page.this,"please provid the username",Toast.LENGTH_SHORT).show();
+
+                  }
+                  else
+                  {
+
+                      Intent intent = new Intent(Login_page.this, profile.class);
+                      String name = username.getText().toString();
+                      intent.putExtra("name", name);
+                      startActivity(intent);
+
+                  }
 
 
-                }catch (Exception e)
-                {
-                    Toast.makeText(Login_page.this,"hi",Toast.LENGTH_SHORT).show();
-                }
 
             }
         });

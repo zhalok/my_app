@@ -23,5 +23,26 @@
         android:layout_height="wrap_content"
 
         />
+<EditText
+    android:id="@+id/name"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:hint="say ur name"
 
+
+    />
+
+
+
+
+
+    <Button
+        android:id="@+id/match"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="matchup"
+        android:textSize="10dp"
+        style="@style/Widget.AppCompat.Toolbar"
+
+/>
 </LinearLayout>
