@@ -52,9 +52,11 @@ public class Registration_page extends AppCompatActivity {
 
 
 
-             if(male.isSelected()||female.isSelected())
+             if(gender.getCheckedRadioButtonId()!=-1)
              {
-                if(math.isSelected()||chem.isSelected()||phy.isSelected()||ict.isSelected())
+
+
+                if(math.isChecked()||chem.isChecked()||phy.isChecked()||ict.isChecked())
                 {
 
                     Intent intent=new Intent(Registration_page.this,New_profile.class);
@@ -69,7 +71,7 @@ public class Registration_page extends AppCompatActivity {
                     intent.putExtra("name",stringBuilder_name.toString());
                     intent.putExtra("sub",stringBuilder_sub.toString());
                     startActivity(intent);
-                    
+
 
 
                 }
