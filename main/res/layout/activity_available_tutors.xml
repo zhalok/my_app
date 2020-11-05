@@ -8,15 +8,15 @@
 
     <ListView
         android:id="@+id/names"
-        android:dividerHeight="2dp"
-        android:divider="@color/colorPrimaryDark"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:divider="@color/colorPrimaryDark"
+        android:dividerHeight="2dp"/>
 
 
 
 
-    </ListView>
+
 
 
 

@@ -8,7 +8,19 @@
         <item>Kaifa</item>
         <item>Tui</item>
         <item>ishrat</item>
-        <item>sust</item>
+
+
+
+    </string-array>
+
+    <string-array name="mottos">
+        <item>SUST CSE</item>
+        <item>SUST CSE</item>
+        <item>SUST CSE</item>
+        <item>SUST CSE</item>
+        <item>SUST CSE</item>
+
+
 
 
     </string-array>
