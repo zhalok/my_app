@@ -1,4 +1,15 @@
 <resources>
     <string name="app_name">T.SUST</string>
     <string name="login">\tLogin as a Tutor</string>
+    <string-array name="tutor_names">
+
+       <item>Akash</item>
+        <item>Aisha</item>
+        <item>Kaifa</item>
+        <item>Tui</item>
+        <item>ishrat</item>
+        <item>sust</item>
+
+
+    </string-array>
 </resources>
