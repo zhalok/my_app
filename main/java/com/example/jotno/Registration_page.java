@@ -5,11 +5,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 public class Registration_page extends AppCompatActivity {
@@ -19,6 +21,8 @@ public class Registration_page extends AppCompatActivity {
     CheckBox math,phy,chem,ict;
     EditText firstname,lastname,age;
     RadioButton male,female;
+    Spinner locations;
+    String[] location_names;
 
 
 
@@ -37,6 +41,11 @@ public class Registration_page extends AppCompatActivity {
         phy=(CheckBox)findViewById(R.id.phy);
         chem=(CheckBox)findViewById(R.id.chem);
         ict=(CheckBox)findViewById(R.id.ict);
+        locations=(Spinner)findViewById(R.id.locations);
+        location_names=getResources().getStringArray(R.array.location_names);
+        CustomAdaptar2 adaptar2= new CustomAdaptar2(this,location_names);
+        locations.setAdapter(adaptar2);
+
 
 
         next.setOnClickListener(new View.OnClickListener() {
@@ -64,12 +73,15 @@ public class Registration_page extends AppCompatActivity {
                     stringBuilder_name.append(firstname.getText().toString()+" ");
                     stringBuilder_name.append(lastname.getText().toString()+" ");
                     StringBuilder stringBuilder_sub=new StringBuilder();
+                    StringBuilder location= new StringBuilder();
+                    location.append(locations.getSelectedItem().toString());
                     if(math.isChecked()) stringBuilder_sub.append(math.getText().toString()+"\n");
                     if(phy.isChecked()) stringBuilder_sub.append(phy.getText().toString()+"\n");
                     if(chem.isChecked()) stringBuilder_sub.append(chem.getText().toString()+"\n");
                     if(ict.isChecked()) stringBuilder_sub.append(ict.getText().toString()+"\n");
                     intent.putExtra("name",stringBuilder_name.toString());
                     intent.putExtra("sub",stringBuilder_sub.toString());
+             //       intent.putExtra("loc",locations.getSelectedItem().toString());
                     startActivity(intent);
 
 

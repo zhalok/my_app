@@ -15,13 +15,13 @@ public class CustomAdapter extends BaseAdapter {
 
     String[] names,mottos;
     Context context;
-    int[] imgs;
+   // int[] imgs;
     CustomAdapter(Context context,String[] names,String[] mottos,int[] imgs)
     {
         this.context=context;
         this.names=names;
         this.mottos=mottos;
-        this.imgs=imgs;
+      //  this.imgs=imgs;
     }
 
 
@@ -50,10 +50,10 @@ public class CustomAdapter extends BaseAdapter {
 
         TextView namess=(TextView) view.findViewById(R.id.sample_view);
         TextView mt=(TextView) view.findViewById(R.id.mottos);
-        ImageView imageView=(ImageView) view.findViewById(R.id.dp);
         namess.setText(names[i]);
         mt.setText(mottos[i]);
-        imageView.setImageResource(imgs[i]);
+
+        //imageView.setImageResource(imgs[i]);
 
 
         return view;

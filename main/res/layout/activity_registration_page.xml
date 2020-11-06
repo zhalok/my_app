@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -8,135 +10,188 @@
     android:padding="10dp"
     tools:context=".Registration_page">
 
-   <TextView
-
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:text="please provide ur information"
-       android:textSize="20dp"
-
-       />
-    <EditText
-        android:id="@+id/fname"
-        android:hint="first name"
-        android:layout_marginTop="20dp"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-
-        />
-    <EditText
-        android:id="@+id/lname"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:hint="last name"
-
-        />
-    <EditText
-        android:id="@+id/age"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:hint="age"
-        android:inputType="number"
-        />
-
-
-    <LinearLayout
-        android:layout_marginTop="20dp"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
 
-        <TextView
-            android:layout_marginTop="20dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Are u a"
-            android:textSize="20dp"
-            />
 
-        <RadioGroup
-            android:id="@+id/gender"
-            android:layout_marginLeft="20dp"
-            android:orientation="horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
 
-            <RadioButton
-                android:id="@+id/male_rbutton"
+
+            <TextView
+
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="male"
+                android:text="please provide ur information"
                 android:textSize="20dp"
+
+                />
+            <EditText
+                android:id="@+id/fname"
+                android:hint="first name"
+                android:layout_marginTop="20dp"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+
+                />
+            <EditText
+                android:id="@+id/lname"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:hint="last name"
+
+                />
+            <EditText
+                android:id="@+id/age"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:hint="age"
+                android:inputType="number"
+                />
+
+
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Are u a"
+                    android:textSize="20dp"
+                    />
+
+                <RadioGroup
+                    android:id="@+id/gender"
+                    android:layout_marginLeft="20dp"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:id="@+id/male_rbutton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="male"
+                        android:textSize="20dp"
+                        style="@style/Widget.AppCompat.Toolbar"
+                        />
+                    <RadioButton
+                        android:id="@+id/female_rbutton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:textSize="20dp"
+                        android:text="female"
+
+                        />
+
+
+                </RadioGroup>
+
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:text="which subjects u want to teach?"
+                />
+
+            <CheckBox
+                android:id="@+id/math"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="math"
+                android:textSize="20dp"
+
+
+                />
+            <CheckBox
+                android:id="@+id/phy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:text="physics"
+
+                />
+            <CheckBox
+                android:id="@+id/chem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:text="chemistry"
+                />
+
+            <CheckBox
+                android:id="@+id/ict"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:text="ICT"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Please provide your location"
+                android:layout_marginTop="20dp"
+                />
+
+            <Spinner
+                android:layout_marginTop="10dp"
+                android:id="@+id/locations"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 style="@style/Widget.AppCompat.Toolbar"
+
+
                 />
-            <RadioButton
-                android:id="@+id/female_rbutton"
+
+            <Button
+                android:id="@+id/next"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="30dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:textSize="20dp"
-                android:text="female"
+                android:text="Next"
+                android:layout_gravity="center"
+
 
                 />
 
 
-        </RadioGroup>
 
 
 
-    </LinearLayout>
-
-    <TextView
-        android:layout_marginTop="20dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="20dp"
-        android:text="which subjects u want to teach?"
-        />
-
-<CheckBox
-    android:id="@+id/math"
-    android:layout_marginTop="10dp"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="math"
-    android:textSize="20dp"
 
 
-    />
-    <CheckBox
-        android:id="@+id/phy"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="20dp"
-        android:text="physics"
-
-        />
-<CheckBox
-    android:id="@+id/chem"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:textSize="20dp"
-    android:text="chemistry"
-/>
-
-    <CheckBox
-        android:id="@+id/ict"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="20dp"
-        android:text="ICT"
-/>
-
-    <Button
-        android:id="@+id/next"
-        android:layout_marginTop="20dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Next"
-        android:layout_gravity="center"
 
 
-        />
+        </LinearLayout>
+
+
+
+
+
+
+
+
+
+    </ScrollView>
+
+
+
 
 
 </LinearLayout>

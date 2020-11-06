@@ -3,12 +3,11 @@
     <string name="login">\tLogin as a Tutor</string>
     <string-array name="tutor_names">
 
-       <item>Akash</item>
+        <item>Akash</item>
         <item>Aisha</item>
         <item>Kaifa</item>
+        <item>Ishrat</item>
         <item>Tui</item>
-        <item>ishrat</item>
-
 
 
     </string-array>
@@ -21,7 +20,21 @@
         <item>SUST CSE</item>
 
 
+    </string-array>
+
+
+    <string-array name="location_names">
+
+       <item>Mirpur</item>
+        <item>Taltola</item>
+        <item>Shahabag</item>
+        <item>Agargaon</item>
+        <item>Matikata</item>
+
 
 
     </string-array>
+
+
+
 </resources>
