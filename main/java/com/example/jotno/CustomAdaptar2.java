@@ -25,7 +25,7 @@ public class CustomAdaptar2 extends BaseAdapter {
 
     @Override
     public Object getItem(int i) {
-        return null;
+        return locations_names[i];
     }
 
     @Override

@@ -81,7 +81,7 @@ public class Registration_page extends AppCompatActivity {
                     if(ict.isChecked()) stringBuilder_sub.append(ict.getText().toString()+"\n");
                     intent.putExtra("name",stringBuilder_name.toString());
                     intent.putExtra("sub",stringBuilder_sub.toString());
-             //       intent.putExtra("loc",locations.getSelectedItem().toString());
+                    intent.putExtra("loc",locations.getSelectedItem().toString());
                     startActivity(intent);
 
 
