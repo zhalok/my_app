@@ -25,16 +25,14 @@
 
     <string-array name="location_names">
 
-       <item>Mirpur</item>
+        <item>Mirpur</item>
         <item>Taltola</item>
         <item>Shahabag</item>
         <item>Agargaon</item>
         <item>Matikata</item>
 
 
-
     </string-array>
-
 
 
 </resources>

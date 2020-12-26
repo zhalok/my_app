@@ -1,8 +1,11 @@
 package com.example.jotno;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -12,25 +15,35 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import java.util.Map;
+import java.util.Set;
+import java.util.zip.Inflater;
+
+import static android.content.SharedPreferences.*;
 
 public class Registration_page extends AppCompatActivity {
 
-    Button next;
+    Button next,load;
     RadioGroup gender;
     CheckBox math,phy,chem,ict;
     EditText firstname,lastname,age;
     RadioButton male,female;
     Spinner locations;
     String[] location_names;
-
+    TextView lastsavedinfo;
+    boolean flag=false;
 
 
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registration_page);
+
         next=(Button)findViewById(R.id.next);
+
         gender=(RadioGroup)findViewById(R.id.gender);
         firstname=(EditText)findViewById(R.id.fname);
         lastname=(EditText)findViewById(R.id.lname);
@@ -67,8 +80,9 @@ public class Registration_page extends AppCompatActivity {
 
                 if(math.isChecked()||chem.isChecked()||phy.isChecked()||ict.isChecked())
                 {
-
+                    flag = true;
                     Intent intent=new Intent(Registration_page.this,New_profile.class);
+                 //   Intent intent1= new Intent(Registration_page.this,LoadData.class);
                     StringBuilder stringBuilder_name = new StringBuilder();
                     stringBuilder_name.append(firstname.getText().toString()+" ");
                     stringBuilder_name.append(lastname.getText().toString()+" ");
@@ -93,7 +107,6 @@ public class Registration_page extends AppCompatActivity {
 
 
          }
-
 
 
 

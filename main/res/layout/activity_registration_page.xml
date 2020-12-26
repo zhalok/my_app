@@ -52,7 +52,22 @@
                 android:hint="age"
                 android:inputType="number"
                 />
+         <EditText
+             android:id="@+id/username"
+             android:layout_width="200dp"
+             android:layout_height="wrap_content"
+             android:hint="Username"
 
+             />
+
+          <EditText
+              android:id="@+id/password"
+              android:layout_width="200dp"
+              android:layout_height="wrap_content"
+              android:inputType="textPassword"
+              android:hint="password"
+
+              />
 
             <LinearLayout
                 android:layout_marginTop="20dp"
@@ -160,6 +175,7 @@
 
             <Button
                 android:id="@+id/next"
+                style="@style/Widget.AppCompat.Toolbar"
                 android:layout_marginTop="40dp"
                 android:layout_marginBottom="30dp"
                 android:layout_width="wrap_content"
