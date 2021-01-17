@@ -8,7 +8,13 @@
     android:padding="20dp"
     tools:context=".Login_page">
 
-
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
     <ImageView
         android:layout_width="150dp"
@@ -39,9 +45,9 @@
         android:id="@+id/pass"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
         android:layout_gravity="center"
         android:padding="20dp"
+        android:inputType="textPassword"
         android:hint="password"
         />
     <Button
@@ -53,6 +59,19 @@
         android:layout_gravity="center"
         style="@style/Widget.AppCompat.Toolbar"
         />
+<Button
+    android:id="@+id/load"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="20dp"
+    android:text="Load"
+    android:textAllCaps="false"
+
+    />
+    </LinearLayout>
+</ScrollView>
 
 
 </LinearLayout>

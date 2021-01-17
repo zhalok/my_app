@@ -33,7 +33,9 @@ public class Registration_page extends AppCompatActivity {
     RadioButton male,female;
     Spinner locations;
     String[] location_names;
-    TextView lastsavedinfo;
+    EditText username,password;
+
+ //   TextView lastsavedinfo;
     boolean flag=false;
 
 
@@ -43,7 +45,8 @@ public class Registration_page extends AppCompatActivity {
         setContentView(R.layout.activity_registration_page);
 
         next=(Button)findViewById(R.id.next);
-
+        username=(EditText)findViewById((R.id.username));
+        password=(EditText)findViewById((R.id.password));
         gender=(RadioGroup)findViewById(R.id.gender);
         firstname=(EditText)findViewById(R.id.fname);
         lastname=(EditText)findViewById(R.id.lname);
