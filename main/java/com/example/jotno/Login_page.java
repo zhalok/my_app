@@ -24,7 +24,7 @@ public class Login_page extends AppCompatActivity {
         username =(EditText)findViewById(R.id.user);
         password=(EditText)findViewById(R.id.pass);
         login=(Button)findViewById(R.id.login);
-        load=(Button)findViewById((R.id.load));
+       // load=(Button)findViewById((R.id.load));
 
 
 
@@ -39,8 +39,8 @@ public class Login_page extends AppCompatActivity {
                   }
                   else
                   {
-
-                      SharedPreferences sharedPreferences=getSharedPreferences("tutordetail", Context.MODE_PRIVATE);
+                   //   Toast.makeText(Login_page.this,username.getText().toString(),Toast.LENGTH_SHORT).show();
+                      SharedPreferences sharedPreferences=getSharedPreferences("tutor_detail", Context.MODE_PRIVATE);
                       SharedPreferences.Editor editor=sharedPreferences.edit();
                       editor.putString("username",username.getText().toString());
                       editor.putString("password",password.getText().toString());
@@ -57,22 +57,30 @@ public class Login_page extends AppCompatActivity {
 
             }
         });
+        /*
 
         load.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                      SharedPreferences sharedPreferences = getSharedPreferences("tutordetail",Context.MODE_PRIVATE);
+                      SharedPreferences sharedPreferences = getSharedPreferences("tutor_detail",Context.MODE_PRIVATE);
                       if(sharedPreferences.contains("username")&&sharedPreferences.contains("password"))
                       {
                           StringBuilder dataloader= new StringBuilder();
-                          String usenname=sharedPreferences.getString("useraname","hi");
-                          String password=sharedPreferences.getString("password","hello");
-                          dataloader.append((usenname+'\n'));
-                          dataloader.append(password+'\n');
+                          String usennameloaded=sharedPreferences.getString("username","kas koros na ken be ?");
+                          String passwordloaded=sharedPreferences.getString("password","hello");
+                          dataloader.append((usennameloaded+'\n'));
+                          dataloader.append(passwordloaded+'\n');
                           Toast.makeText(Login_page.this,dataloader.toString(),Toast.LENGTH_SHORT).show();
+                          //Toast.makeText(Login_page.this,usennameloaded,Toast.LENGTH_SHORT).show();
+                      }
+                      else {
+                          Toast.makeText(Login_page.this,"hi there",Toast.LENGTH_SHORT).show();
+
                       }
             }
         });
+        */
+
 
 
 

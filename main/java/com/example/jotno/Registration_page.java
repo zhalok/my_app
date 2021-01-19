@@ -26,7 +26,7 @@ import static android.content.SharedPreferences.*;
 
 public class Registration_page extends AppCompatActivity {
 
-    Button next,load;
+    Button next,load,store;
     RadioGroup gender;
     CheckBox math,phy,chem,ict;
     EditText firstname,lastname,age;
@@ -34,6 +34,7 @@ public class Registration_page extends AppCompatActivity {
     Spinner locations;
     String[] location_names;
     EditText username,password;
+
 
  //   TextView lastsavedinfo;
     boolean flag=false;
@@ -45,6 +46,7 @@ public class Registration_page extends AppCompatActivity {
         setContentView(R.layout.activity_registration_page);
 
         next=(Button)findViewById(R.id.next);
+        store=(Button)findViewById(R.id.store);
         username=(EditText)findViewById((R.id.username));
         password=(EditText)findViewById((R.id.password));
         gender=(RadioGroup)findViewById(R.id.gender);
@@ -72,11 +74,6 @@ public class Registration_page extends AppCompatActivity {
              Toast.makeText(Registration_page.this,"please provide ur information",Toast.LENGTH_SHORT).show();
          else
          {
-
-
-
-
-
              if(gender.getCheckedRadioButtonId()!=-1)
              {
 
@@ -96,9 +93,11 @@ public class Registration_page extends AppCompatActivity {
                     if(phy.isChecked()) stringBuilder_sub.append(phy.getText().toString()+"\n");
                     if(chem.isChecked()) stringBuilder_sub.append(chem.getText().toString()+"\n");
                     if(ict.isChecked()) stringBuilder_sub.append(ict.getText().toString()+"\n");
+                    intent.putExtra("congo","Congratulations, You are successfully registered \n");
                     intent.putExtra("name",stringBuilder_name.toString());
                     intent.putExtra("sub",stringBuilder_sub.toString());
                     intent.putExtra("loc",locations.getSelectedItem().toString());
+
                     startActivity(intent);
 
 
@@ -111,32 +110,23 @@ public class Registration_page extends AppCompatActivity {
 
          }
 
+            }
+        });
 
 
 
+        store.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent1 = new Intent(Registration_page.this,database.class);
+                try {
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                    startActivity(intent1);
+                }catch (Exception e)
+                {
+                    e.printStackTrace();
+                }
             }
         });
 
