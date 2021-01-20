@@ -1,28 +1,17 @@
 package com.example.jotno;
 
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
-import android.widget.TextView;
 import android.widget.Toast;
-
-import java.util.Map;
-import java.util.Set;
-import java.util.zip.Inflater;
-
-import static android.content.SharedPreferences.*;
 
 public class Registration_page extends AppCompatActivity {
 
@@ -118,15 +107,11 @@ public class Registration_page extends AppCompatActivity {
         store.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent1 = new Intent(Registration_page.this,database.class);
-                try {
+                Intent intent1 = new Intent(Registration_page.this, Data_base.class);
 
 
                     startActivity(intent1);
-                }catch (Exception e)
-                {
-                    e.printStackTrace();
-                }
+
             }
         });
 

@@ -7,7 +7,7 @@ import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 
-public class database extends SQLiteOpenHelper {
+public class Database extends SQLiteOpenHelper {
 
     private Context context;
     private static final String ID="id";
@@ -18,7 +18,7 @@ public class database extends SQLiteOpenHelper {
     private static final String GENDER="Gender";
     private static final int VERSION=1;
     private static final String CREATE_TABLE = "CREATE TABLE "+TABLE_NAME+"("+ID+" INTEGER PRIMARY KEY AUTOINCREMENT,"+NAME+" VARCHAR(255),"+ID+" INTEGER);";
-    public database( Context context) {
+    public Database(Context context) {
         super(context, DB_NAME, null, 1);
         this.context=context;
 
