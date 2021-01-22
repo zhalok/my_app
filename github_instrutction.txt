@@ -1,0 +1,56 @@
+for making a reposiotry in github 
+u need a local repository and a remote repository 
+the remote repository will be opened in the github
+then the local repository will be in the directory where u want to keep ur project or files 
+then after opening a remote repository in github
+
+
+-> go to the directory where u want to make the local repository 
+-> open the git bash 
+-> write git init 
+       after this you will see that in that directory there will appear a .git folder this means ur local repository is created
+-> now connect the local repository with the remote repository
+   write git remote add origin " the remote repository link which you will find in the clone section " (without qoute marks)
+  
+   ( now as ur local and remote repository are connected u can add files in your remote repository from your local repository )
+-> to add your files of the local repository 
+   write git add .
+   
+   ( now that ur files are added to the remote reposiotry its time to commit )
+-> to commit 
+   write git commit -m "anything u want" (ur update of files will be named according to the string u give here)
+   
+   ( now its time to name the branch where u want to push. this section is not needed if the name of the branch is already created )
+-> to name a branch 
+   write git branch -M main 
+   
+   ( now its finally time to push )
+-> to push 
+   write git push -u origin main
+
+
+now for further commits and push you dont need to do some of the above steps 
+
+as the local repository is already connected to the remote one u dont need to make the command git add remote origin
+
+then as the name of the branch is also confirmed as main u also dont need to write git branch -M main during further commits and pushs
+
+for further commits and pushs
+just add files 
+then commit 
+then push 
+
+write the 3 following lines 
+
+-> git add .
+-> git commit -m "anything u want"
+-> git push -u origin main
+
+thats it u are done 
+that all the github u need to know for project 250 
+
+as i have spend some of my valuable times of my life without sleeping just to make u understand github 
+plz dont forget to give me a fuchka treat after the varsity opens
+
+Thank You 
+
