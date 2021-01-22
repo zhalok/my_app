@@ -14,7 +14,7 @@ public class Data_base extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_data_base);
         database = new Database(this);
-        SQLiteDatabase sqLiteDatabase=database.getWritableDatabase();
+        SQLiteDatabase sqLiteDatabase = database.getWritableDatabase();
 
 
 
