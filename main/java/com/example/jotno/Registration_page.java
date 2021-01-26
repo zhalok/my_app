@@ -35,7 +35,7 @@ public class Registration_page extends AppCompatActivity {
         setContentView(R.layout.activity_registration_page);
 
         next=(Button)findViewById(R.id.next);
-        store=(Button)findViewById(R.id.store);
+        //store=(Button)findViewById(R.id.store);
         username=(EditText)findViewById((R.id.username));
         password=(EditText)findViewById((R.id.password));
         gender=(RadioGroup)findViewById(R.id.gender);
@@ -104,16 +104,7 @@ public class Registration_page extends AppCompatActivity {
 
 
 
-        store.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent1 = new Intent(Registration_page.this, Data_base.class);
 
-
-                    startActivity(intent1);
-
-            }
-        });
 
 
     }
