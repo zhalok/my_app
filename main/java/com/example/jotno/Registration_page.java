@@ -23,6 +23,7 @@ public class Registration_page extends AppCompatActivity {
     Spinner locations;
     String[] location_names;
     EditText username,password;
+    Database database ;
 
 
  //   TextView lastsavedinfo;
@@ -52,6 +53,7 @@ public class Registration_page extends AppCompatActivity {
         location_names=getResources().getStringArray(R.array.location_names);
         CustomAdaptar2 adaptar2= new CustomAdaptar2(this,location_names);
         locations.setAdapter(adaptar2);
+        database= new Database(this);
 
 
 
@@ -86,6 +88,13 @@ public class Registration_page extends AppCompatActivity {
                     intent.putExtra("name",stringBuilder_name.toString());
                     intent.putExtra("sub",stringBuilder_sub.toString());
                     intent.putExtra("loc",locations.getSelectedItem().toString());
+                    long rowid= database.insertData(stringBuilder_name.toString(),location.toString(),stringBuilder_sub.toString());
+                    if(rowid>0) {
+                        Toast.makeText(Registration_page.this,"Database insert method is called row inserted is "+rowid+" ",Toast.LENGTH_SHORT).show();
+                    }
+                    else {
+                        Toast.makeText(Registration_page.this,"Database insert method failed to be called",Toast.LENGTH_SHORT).show();
+                    }
 
                     startActivity(intent);
 
@@ -108,4 +117,8 @@ public class Registration_page extends AppCompatActivity {
 
 
     }
+
+
+
+
 }

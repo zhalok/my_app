@@ -22,9 +22,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
             database = new Database(this);
-
-
-           SQLiteDatabase sqLiteDatabase = database.getWritableDatabase();
+            SQLiteDatabase sqLiteDatabase = database.getWritableDatabase();
 
         login=(Button)findViewById(R.id.login_button);
         search=(Button)findViewById(R.id.look_button);
