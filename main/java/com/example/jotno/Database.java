@@ -4,6 +4,7 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteException;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.widget.Toast;
 
@@ -19,14 +20,14 @@ public class Database extends SQLiteOpenHelper {
     private static final String AGE="Age";
     private static final String USERNAME="Username";
     private static final String PASSWORD="Password";
-    private static final int VERSION=1;
+    private static final int VERSION=2;
     private static final String CREATE_TABLE = "CREATE TABLE "+TABLE_NAME+"("+ID+" INTEGER PRIMARY KEY AUTOINCREMENT,"+NAME+" VARCHAR(255),"+LOCATION+" VARCHAR(100), "+SUB+" VARCHAR(255), "+USERNAME+" VARCHAR(255), "+PASSWORD+" VARCHAR(255));";
     private static final String DROP_TABOLE = "DROP TABLE IF EXISTS "+TABLE_NAME+" ";
     private static final String SELECT = " SELECT * FROM "+TABLE_NAME+" ";
 
     public Database(Context context) {
         super(context, DB_NAME, null, VERSION);
-        this.context=context;
+        this.context = context;
 
     }
 //hiiiiiiiiiiiiiiii
@@ -75,7 +76,7 @@ public class Database extends SQLiteOpenHelper {
 
     public Cursor getData(SQLiteDatabase sqLiteDatabase)
     {
-        Cursor cursor = sqLiteDatabase.rawQuery(SELECT,null);
+        Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM Tutor_info",null);
         return cursor;
 
     }
