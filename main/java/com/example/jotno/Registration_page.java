@@ -88,7 +88,7 @@ public class Registration_page extends AppCompatActivity {
                     intent.putExtra("name",stringBuilder_name.toString());
                     intent.putExtra("sub",stringBuilder_sub.toString());
                     intent.putExtra("loc",locations.getSelectedItem().toString());
-                    long rowid= database.insertData(stringBuilder_name.toString(),location.toString(),stringBuilder_sub.toString());
+                    long rowid= database.insertData(stringBuilder_name.toString(),location.toString(),stringBuilder_sub.toString(),username.toString(),password.toString());
                     if(rowid>0) {
                         Toast.makeText(Registration_page.this,"Database insert method is called row inserted is "+rowid+" ",Toast.LENGTH_SHORT).show();
                     }
@@ -97,7 +97,7 @@ public class Registration_page extends AppCompatActivity {
                     }
 
                     startActivity(intent);
-
+                    finish();
 
 
                 }

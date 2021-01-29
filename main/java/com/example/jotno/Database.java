@@ -2,14 +2,10 @@ package com.example.jotno;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.text.style.SubscriptSpan;
 import android.widget.Toast;
-
-import androidx.annotation.Nullable;
-
-import java.security.spec.ECField;
 
 public class Database extends SQLiteOpenHelper {
 
@@ -21,9 +17,13 @@ public class Database extends SQLiteOpenHelper {
     private static final String SUB="Subs";
     private static final String LOCATION="Location";
     private static final String AGE="Age";
-    private static final int VERSION=2;
-    private static final String CREATE_TABLE = "CREATE TABLE "+TABLE_NAME+"("+ID+" INTEGER PRIMARY KEY AUTOINCREMENT,"+NAME+" VARCHAR(255),"+LOCATION+" VARCHAR(100), "+SUB+" VARCHAR(255) );";
+    private static final String USERNAME="Username";
+    private static final String PASSWORD="Password";
+    private static final int VERSION=1;
+    private static final String CREATE_TABLE = "CREATE TABLE "+TABLE_NAME+"("+ID+" INTEGER PRIMARY KEY AUTOINCREMENT,"+NAME+" VARCHAR(255),"+LOCATION+" VARCHAR(100), "+SUB+" VARCHAR(255), "+USERNAME+" VARCHAR(255), "+PASSWORD+" VARCHAR(255));";
     private static final String DROP_TABOLE = "DROP TABLE IF EXISTS "+TABLE_NAME+" ";
+    private static final String SELECT = " SELECT * FROM "+TABLE_NAME+" ";
+
     public Database(Context context) {
         super(context, DB_NAME, null, VERSION);
         this.context=context;
@@ -60,14 +60,23 @@ public class Database extends SQLiteOpenHelper {
 
     }
 
-    public long insertData(String Name,String Location,String Subs){
+    public long insertData(String Name,String Location,String Subs,String Username,String Password){
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put(NAME,Name);
         contentValues.put(LOCATION,Location);
         contentValues.put(SUB,Subs);
-        long rowid = sqLiteDatabase.insert(DB_NAME,null,contentValues);
+        contentValues.put(USERNAME,Username);
+        contentValues.put(PASSWORD,Password);
+        long rowid = sqLiteDatabase.insert(TABLE_NAME,null,contentValues);
         return rowid;
+
+    }
+
+    public Cursor getData(SQLiteDatabase sqLiteDatabase)
+    {
+        Cursor cursor = sqLiteDatabase.rawQuery(SELECT,null);
+        return cursor;
 
     }
 
