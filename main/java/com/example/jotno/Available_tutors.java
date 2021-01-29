@@ -10,16 +10,22 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import java.util.Vector;
+
 import static com.example.jotno.R.id.mottos;
 import static com.example.jotno.R.id.names;
 
-public class available_tutors extends AppCompatActivity {
+public class Available_tutors extends AppCompatActivity {
 
 
     String[] tutors;
-    String[] mottoss;
 
-    int[] imgss={
+    String[] locations;
+
+   // Vector<Integer>v;
+    //Vector<String>tutors;
+    //Vector<String>mottos;
+   /* int[] imgss={
             R.drawable.akashbatash,
             R.drawable.aisha,
             R.drawable.kaifa,
@@ -29,22 +35,23 @@ public class available_tutors extends AppCompatActivity {
 
 
     };
+    */
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        tutors=getIntent().getStringArrayExtra("names");
+        locations=getIntent().getStringArrayExtra("locations");
+
         setContentView(R.layout.activity_available_tutors);
         ListView names=(ListView) findViewById(R.id.names);
-        tutors=getResources().getStringArray(R.array.tutor_names);
-        mottoss=getResources().getStringArray(R.array.mottos);
-        CustomAdapter adapter= new CustomAdapter(this,tutors,mottoss,imgss);
+       // tutors=getResources().getStringArray(R.array.tutor_names);
+       // locations=getResources().getStringArray(R.array.location_names);
+        CustomAdapter adapter= new CustomAdapter(this,tutors,locations);
         names.setAdapter(adapter);
         names.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-
-
-
-               
-
 
             }
         });

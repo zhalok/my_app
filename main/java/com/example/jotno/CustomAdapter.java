@@ -16,7 +16,7 @@ public class CustomAdapter extends BaseAdapter {
     String[] names,mottos;
     Context context;
    // int[] imgs;
-    CustomAdapter(Context context,String[] names,String[] mottos,int[] imgs)
+    CustomAdapter(Context context,String[] names,String[] mottos)
     {
         this.context=context;
         this.names=names;

@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
        search.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View view) {
-               Intent intent = new Intent(MainActivity.this,available_tutors.class);
+               Intent intent = new Intent(MainActivity.this,Data_Loading_Screen.class);
                startActivity(intent);
            }
        });
@@ -78,9 +78,8 @@ public class MainActivity extends AppCompatActivity {
                  }
                  MakeAlertDialouge("Information",message.toString());
              }
-             else {
-                 Toast.makeText(MainActivity.this,"No tutors have registered",Toast.LENGTH_SHORT).show();
-             }
+             else
+                 Toast.makeText(MainActivity.this, "No tutors have registered", Toast.LENGTH_SHORT).show();
 
            }
        });
