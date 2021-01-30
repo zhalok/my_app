@@ -16,10 +16,11 @@ public class Database extends SQLiteOpenHelper {
     private static final String NAME="Name";
     private static final String SUB="Subs";
     private static final String LOCATION="Location";
+
     private static final String AGE="Age";
     private static final String USERNAME="Username";
     private static final String PASSWORD="Password";
-    private static final int VERSION=1;
+    private static final int VERSION=2;
     private static final String CREATE_TABLE = "CREATE TABLE "+TABLE_NAME+"("+ID+" INTEGER PRIMARY KEY AUTOINCREMENT,"+NAME+" VARCHAR(255),"+LOCATION+" VARCHAR(100), "+SUB+" VARCHAR(255), "+USERNAME+" VARCHAR(255), "+PASSWORD+" VARCHAR(255));";
     private static final String DROP_TABOLE = "DROP TABLE IF EXISTS "+TABLE_NAME+" ";
     private static final String SELECT = " SELECT * FROM "+TABLE_NAME+" ";

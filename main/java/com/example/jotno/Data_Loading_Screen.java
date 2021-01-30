@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
 import java.util.Vector;
 
 public class Data_Loading_Screen extends AppCompatActivity {
@@ -22,8 +23,8 @@ public class Data_Loading_Screen extends AppCompatActivity {
         SQLiteDatabase sqLiteDatabase = database.getWritableDatabase();
         Cursor cursor = database.getData(sqLiteDatabase);
         if(cursor.getCount()>0){
-            Vector<String>names = new Vector<String>();
-            Vector<String>locations = new Vector<String>();
+            ArrayList<String>names=new ArrayList<>();
+            ArrayList<String>locations=new ArrayList<>();
             while(cursor.moveToNext())
             {
                  String name=cursor.getString(1);
@@ -34,16 +35,16 @@ public class Data_Loading_Screen extends AppCompatActivity {
 
             String[] strnames=new String[100000];
             String[] strlocations= new String[100000];
-            names.copyInto(strnames);
-            locations.copyInto(strlocations);
+          //  names.copyInto(strnames);
+          //  locations.copyInto(strlocations);
             Intent intent = new Intent(Data_Loading_Screen.this,Available_tutors.class);
-            intent.putExtra("names",strnames);
-            intent.putExtra("locations",strlocations);
+            intent.putStringArrayListExtra("names",names);
+            intent.putStringArrayListExtra("locations",locations);
             startActivity(intent);
         }
         else {
             Toast.makeText(Data_Loading_Screen.this,"No Tutors",Toast.LENGTH_SHORT).show();
-            finish();
+
         }
 
 
