@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".available_tutors">
+    tools:context=".Available_tutors">
 
     <ListView
         android:id="@+id/names"

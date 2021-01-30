@@ -23,8 +23,8 @@ public class Data_Loading_Screen extends AppCompatActivity {
         SQLiteDatabase sqLiteDatabase = database.getWritableDatabase();
         Cursor cursor = database.getData(sqLiteDatabase);
         if(cursor.getCount()>0){
-            ArrayList<String>names=new ArrayList<>();
-            ArrayList<String>locations=new ArrayList<>();
+            ArrayList<String>names=new ArrayList<String>();
+            ArrayList<String>locations=new ArrayList<String>();
             while(cursor.moveToNext())
             {
                  String name=cursor.getString(1);
@@ -33,10 +33,7 @@ public class Data_Loading_Screen extends AppCompatActivity {
                  locations.add(location);
             }
 
-            String[] strnames=new String[100000];
-            String[] strlocations= new String[100000];
-          //  names.copyInto(strnames);
-          //  locations.copyInto(strlocations);
+
             Intent intent = new Intent(Data_Loading_Screen.this,Available_tutors.class);
             intent.putStringArrayListExtra("names",names);
             intent.putStringArrayListExtra("locations",locations);
