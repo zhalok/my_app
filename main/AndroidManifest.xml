@@ -13,7 +13,7 @@
         <activity android:name=".Data_base" />
         <activity android:name=".MainActivity" />
         <activity android:name=".Akash_profile" />
-        <activity android:name=".available_tutors" />
+        <activity android:name=".Available_tutors" />
         <activity android:name=".New_profile" />
         <activity android:name=".Registration_page" />
         <activity android:name=".profile" />

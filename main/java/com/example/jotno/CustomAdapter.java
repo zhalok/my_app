@@ -16,8 +16,8 @@ public class CustomAdapter extends BaseAdapter {
 
     ArrayList<String> names,locations;
     Context context;
-   // int[] imgs;
-    CustomAdapter(Context context, ArrayList<String> names, ArrayList<String> locations)
+
+    CustomAdapter(Context context, ArrayList<String>names, ArrayList<String>locations)
     {
         this.context=context;
         this.names=names;

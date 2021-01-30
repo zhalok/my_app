@@ -43,6 +43,7 @@ public class Data_Loading_Screen extends AppCompatActivity {
             Toast.makeText(Data_Loading_Screen.this,"No Tutors",Toast.LENGTH_SHORT).show();
 
         }
+        finish();
 
 
 
