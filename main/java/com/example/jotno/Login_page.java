@@ -16,7 +16,7 @@ import android.widget.Toast;
 
 public class Login_page extends AppCompatActivity {
     private EditText username,password ;
-    private Button login,load;
+    private Button login,Signup;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,8 +26,9 @@ public class Login_page extends AppCompatActivity {
         username =(EditText)findViewById(R.id.user);
         password=(EditText)findViewById(R.id.pass);
         login=(Button)findViewById(R.id.login);
+        Signup=(Button)findViewById(R.id.signup);
         final Database database = new Database(this);
-       // load=(Button)findViewById((R.id.load));
+
 
 
 
@@ -88,29 +89,16 @@ public class Login_page extends AppCompatActivity {
 
             }
         });
-        /*
 
-        load.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                      SharedPreferences sharedPreferences = getSharedPreferences("tutor_detail",Context.MODE_PRIVATE);
-                      if(sharedPreferences.contains("username")&&sharedPreferences.contains("password"))
-                      {
-                          StringBuilder dataloader= new StringBuilder();
-                          String usennameloaded=sharedPreferences.getString("username","kas koros na ken be ?");
-                          String passwordloaded=sharedPreferences.getString("password","hello");
-                          dataloader.append((usennameloaded+'\n'));
-                          dataloader.append(passwordloaded+'\n');
-                          Toast.makeText(Login_page.this,dataloader.toString(),Toast.LENGTH_SHORT).show();
-                          //Toast.makeText(Login_page.this,usennameloaded,Toast.LENGTH_SHORT).show();
-                      }
-                      else {
-                          Toast.makeText(Login_page.this,"hi there",Toast.LENGTH_SHORT).show();
 
-                      }
-            }
-        });
-        */
+
+      Signup.setOnClickListener(new View.OnClickListener() {
+          @Override
+          public void onClick(View view) {
+              Intent intent = new Intent(getApplicationContext(),Registration_page.class);
+              startActivity(intent);
+          }
+      });
 
 
 

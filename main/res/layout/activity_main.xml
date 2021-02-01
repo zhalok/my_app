@@ -61,32 +61,8 @@
             android:padding="25dp"
             style="@style/Widget.AppCompat.Toolbar"  />
 
-        <Button
 
-            android:id="@+id/register_button"
-            android:drawableLeft="@drawable/registration"
-            android:layout_marginTop="20dp"
-            android:padding="25dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="   Register"
-            android:textAllCaps="false"
-            style="@style/Widget.AppCompat.Toolbar"
-            />
 
-        <Button
-            android:layout_width="120dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/Show_data"
-            android:text="Show Data"
-            android:textAllCaps="false"
-            android:layout_gravity="center"
-            style="@style/Widget.AppCompat.Toolbar"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-
-            />
 
 
 

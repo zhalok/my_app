@@ -8,6 +8,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="10dp"
+    android:background="@color/color_of_starting_page"
     tools:context=".Registration_page">
 
     <ScrollView
@@ -26,7 +27,7 @@
 
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="please provide ur information"
+                android:text="Please provide ur information"
                 android:textSize="20dp"
 
                 />
@@ -34,36 +35,36 @@
                 android:id="@+id/fname"
                 android:hint="first name"
                 android:layout_marginTop="20dp"
-                android:layout_width="200dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
 
                 />
             <EditText
                 android:id="@+id/lname"
-                android:layout_width="200dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="last name"
 
                 />
             <EditText
                 android:id="@+id/age"
-                android:layout_width="200dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="age"
                 android:inputType="number"
                 />
          <EditText
              android:id="@+id/username"
-             android:layout_width="200dp"
+             android:layout_width="match_parent"
              android:layout_height="wrap_content"
-             android:hint="Username"
+             android:hint="Email"
 
              />
 
           <EditText
               android:id="@+id/password"
-              android:layout_width="200dp"
               android:layout_height="wrap_content"
+              android:layout_width="match_parent"
               android:inputType="textPassword"
               android:hint="password"
 
@@ -183,6 +184,14 @@
                 android:text="Next"
                 android:layout_gravity="center"
 
+
+                />
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="invisible"
+                android:id="@+id/load"
 
                 />
 

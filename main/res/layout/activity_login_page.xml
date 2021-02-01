@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="20dp"
+    android:background="@color/color_of_starting_page"
     tools:context=".Login_page">
 
 <ScrollView
@@ -17,10 +18,10 @@
         android:orientation="vertical">
 
     <ImageView
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_gravity="center"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="20dp"
         android:src="@drawable/tutor"
         />
     <TextView
@@ -28,37 +29,65 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="LOGIN"
+        android:text="Sign in"
         android:textSize="40dp"
 
         />
     <EditText
+        android:drawableLeft="@drawable/ic_baseline_assignment_ind_24"
         android:id="@+id/user"
         android:layout_marginTop="20dp"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Username"
+        android:hint="Email"
         android:layout_gravity="center"
         android:padding="20dp"
         />
     <EditText
+        android:drawableLeft="@drawable/ic_baseline_lock_24"
         android:id="@+id/pass"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:padding="20dp"
         android:inputType="textPassword"
         android:hint="password"
         />
-    <Button
-        android:id="@+id/login"
-        android:layout_marginTop="20dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Login"
-        android:layout_gravity="center"
-        style="@style/Widget.AppCompat.Toolbar"
-        />
+
+
+            <Button
+                android:id="@+id/login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Log in"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                style="@style/Widget.AppCompat.Toolbar"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Or,"
+                android:textAllCaps="false"
+                android:layout_gravity="center"
+
+                />
+
+            <Button
+                android:id="@+id/signup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sign up"
+                android:textAllCaps="false"
+                android:layout_gravity="center"
+
+                style="@style/Widget.AppCompat.Toolbar"
+                />
+
+
+
+
 
     </LinearLayout>
 </ScrollView>
