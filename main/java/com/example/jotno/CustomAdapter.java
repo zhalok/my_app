@@ -31,8 +31,12 @@ public class CustomAdapter extends BaseAdapter {
     }
 
     @Override
-    public Object getItem(int i) {
-        return null;
+    public ArrayList<String> getItem(int i) {
+        ArrayList<String> information = new ArrayList<String>();
+        information.add(names.get(i));
+        information.add(locations.get(i));
+        return information;
+
     }
 
     @Override

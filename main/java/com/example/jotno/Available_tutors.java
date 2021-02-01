@@ -36,12 +36,18 @@ public class Available_tutors extends AppCompatActivity {
         setContentView(R.layout.activity_available_tutors);
         ListView names=(ListView) findViewById(R.id.names);
 
-        CustomAdapter adapter= new CustomAdapter(this,tutors,locations);
+        final CustomAdapter adapter= new CustomAdapter(this,tutors,locations);
         names.setAdapter(adapter);
         names.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-
+                 ArrayList<String> information=adapter.getItem(i);
+                 String Name=information.get(0);
+                 String Location=information.get(1);
+                 Intent intent = new Intent(Available_tutors.this,Tutor_profile.class);
+                 intent.putExtra("name",Name);
+                 intent.putExtra("location",Location);
+                 startActivity(intent);
             }
         });
 

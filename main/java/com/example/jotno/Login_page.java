@@ -61,14 +61,15 @@ public class Login_page extends AppCompatActivity {
                                if(Username.matches(username.getText().toString())&&Password.matches(password.getText().toString()))
                                {
                                    flag=true;
-                                   startActivity(intent);
-                                   finish();
+                                   break;
                                }
                           }
 
                           if(flag==false)
                           Toast.makeText(Login_page.this,"You are not registered",Toast.LENGTH_SHORT).show();
                           else {
+                              startActivity(intent);
+                              finish();
                               Toast.makeText(Login_page.this,"Login Successful",Toast.LENGTH_SHORT).show();
                           }
 

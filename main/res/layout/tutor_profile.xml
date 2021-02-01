@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
 
 
-    tools:context=".Akash_profile">
+    tools:context=".Tutor_profile">
 
 
     <ScrollView
@@ -19,15 +19,9 @@
        android:orientation="vertical"
        android:padding="20dp">
 
-       <ImageView
-           android:layout_width="140dp"
-           android:layout_height="140dp"
-           android:layout_gravity="center"
-           android:src="@drawable/akashbatash"
-           android:id="@+id/akashdp"
 
-           />
       <TextView
+          android:id="@+id/tutor_name"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_marginTop="20dp"
@@ -39,6 +33,7 @@
 
           />
        <TextView
+           android:id="@+id/Tutor_location"
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
            android:text="SUST CSE"
@@ -48,6 +43,16 @@
 
            />
 
+       <Button
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_gravity="center"
+           android:layout_marginTop="200dp"
+           android:text="Delete profile"
+           android:textAllCaps="false"
+           style="@style/Widget.AppCompat.PopupMenu"
+
+           />
 
 
 

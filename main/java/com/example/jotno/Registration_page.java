@@ -3,6 +3,7 @@ package com.example.jotno;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -73,7 +74,8 @@ public class Registration_page extends AppCompatActivity {
                 {
                     flag = true;
                     Intent intent=new Intent(Registration_page.this,New_profile.class);
-                 //   Intent intent1= new Intent(Registration_page.this,LoadData.class);
+
+
                     StringBuilder stringBuilder_name = new StringBuilder();
                     stringBuilder_name.append(firstname.getText().toString()+" ");
                     stringBuilder_name.append(lastname.getText().toString()+" ");
@@ -88,7 +90,11 @@ public class Registration_page extends AppCompatActivity {
                     intent.putExtra("name",stringBuilder_name.toString());
                     intent.putExtra("sub",stringBuilder_sub.toString());
                     intent.putExtra("loc",locations.getSelectedItem().toString());
+
+
+
                     long rowid= database.insertData(stringBuilder_name.toString(),location.toString(),stringBuilder_sub.toString(),username.getText().toString(),password.getText().toString());
+
                     if(rowid>0) {
                         Toast.makeText(Registration_page.this,"Database insert method is called row inserted is "+rowid+" ",Toast.LENGTH_SHORT).show();
                     }
