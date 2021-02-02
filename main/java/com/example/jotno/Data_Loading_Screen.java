@@ -1,51 +1,90 @@
 package com.example.jotno;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.os.Handler;
+import android.view.View;
+import android.widget.ListView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.Vector;
 
 public class Data_Loading_Screen extends AppCompatActivity {
 
+   private ProgressBar progressBar ;
+   private int progressStatus=0;
+   private Handler handler;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_data__loading__screen);
+        progressBar=(ProgressBar)findViewById(R.id.loading);
+        progressBar.setVisibility(View.VISIBLE);
+        handler=new Handler();
+        runProgressbar();
+        Thread thread = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    Thread.sleep(6000);
+                    Intent intent = new Intent(getApplicationContext(),Available_tutors.class);
+                    startActivity(intent);
+                    finish();
 
-        Database database = new Database(this);
-        SQLiteDatabase sqLiteDatabase = database.getWritableDatabase();
-        Cursor cursor = database.getData(sqLiteDatabase);
-        if(cursor.getCount()>0){
-            ArrayList<String>names=new ArrayList<String>();
-            ArrayList<String>locations=new ArrayList<String>();
-            while(cursor.moveToNext())
-            {
-                 String name=cursor.getString(1);
-                 String location=cursor.getString(2);
-                 names.add(name);
-                 locations.add(location);
+
+                }catch (Exception e)
+                {
+
+                }
+
+
             }
-
-
-            Intent intent = new Intent(Data_Loading_Screen.this,Available_tutors.class);
-            intent.putStringArrayListExtra("names",names);
-            intent.putStringArrayListExtra("locations",locations);
-            startActivity(intent);
-        }
-        else {
-            Toast.makeText(Data_Loading_Screen.this,"No Tutors",Toast.LENGTH_SHORT).show();
-
-        }
-        finish();
-
+        });
+        thread.start();
 
 
     }
+
+    public void runProgressbar()
+    {
+        new Thread(new Runnable() {
+            public void run() {
+
+                while (progressStatus < 10000) {
+                    progressStatus += 4;
+                    //Update progress bar with completion of operation
+                    handler.post(new Runnable() {
+                        public void run() {
+                            progressBar.setProgress(progressStatus);
+                        }
+                    });
+                    try {
+                        // Sleep for 300 milliseconds.
+                        //Just to display the progress slowly
+                        Thread.sleep(300);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        }).start();
+    }
+
+
 }

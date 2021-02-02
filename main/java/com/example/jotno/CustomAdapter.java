@@ -14,29 +14,26 @@ import java.util.zip.Inflater;
 
 public class CustomAdapter extends BaseAdapter {
 
-    ArrayList<String> names,locations;
+    ArrayList<Tutor> tutor;
     Context context;
 
-    CustomAdapter(Context context, ArrayList<String>names, ArrayList<String>locations)
+    CustomAdapter(Context context, ArrayList<Tutor>tutor)
     {
         this.context=context;
-        this.names=names;
-        this.locations=locations;
+        this.tutor=tutor;
+
 
     }
 
 
     public int getCount() {
-        return names.size();
+        return tutor.size();
     }
 
     @Override
-    public ArrayList<String> getItem(int i) {
-        ArrayList<String> information = new ArrayList<String>();
-        information.add(names.get(i));
-        information.add(locations.get(i));
-        return information;
+    public Object getItem(int i) {
 
+     return null;
     }
 
     @Override
@@ -53,10 +50,16 @@ public class CustomAdapter extends BaseAdapter {
             view=inflater.inflate(R.layout.sample_view,viewGroup,false);
         }
 
+
+
         TextView namess=(TextView) view.findViewById(R.id.sample_view);
-        TextView mt=(TextView) view.findViewById(R.id.mottos);
-        namess.setText(names.get(i));
-        mt.setText(locations.get(i));
+        TextView subjects=(TextView) view.findViewById(R.id.mottos);
+        String name=tutor.get(i).getName();
+        String subject=tutor.get(i).getSubject();
+
+        namess.setText(name);
+        subjects.setText(subject);
+
 
         //imageView.setImageResource(imgs[i]);
 

@@ -40,6 +40,7 @@ public class Registration_page extends AppCompatActivity {
    private int progressStatus=0;
    private Handler handler;
    private DatabaseReference databaseReference;
+   private Tutor tutor;
 
 
  //   TextView lastsavedinfo;
@@ -73,7 +74,7 @@ public class Registration_page extends AppCompatActivity {
         CustomAdaptar2 adaptar2= new CustomAdaptar2(this,location_names);
         locations.setAdapter(adaptar2);
         mAuth=FirebaseAuth.getInstance();
-        databaseReference = FirebaseDatabase.getInstance().getReference();
+        databaseReference = FirebaseDatabase.getInstance().getReference("Tutor information");
 
 
         next.setOnClickListener(new View.OnClickListener() {
@@ -100,12 +101,12 @@ public class Registration_page extends AppCompatActivity {
                     name.append(lastname.getText().toString());
                     location.append(locations.getSelectedItem().toString());
 
-                    if(math.isChecked()) subjects.append(math.getText().toString()+"\n");
-                    if(phy.isChecked()) subjects.append(phy.getText().toString()+"\n");
-                    if(chem.isChecked()) subjects.append(chem.getText().toString()+"\n");
-                    if(ict.isChecked()) subjects.append(ict.getText().toString()+"\n");
+                    if(math.isChecked()) subjects.append(math.getText().toString()+" ");
+                    if(phy.isChecked()) subjects.append(phy.getText().toString()+" ");
+                    if(chem.isChecked()) subjects.append(chem.getText().toString()+" ");
+                    if(ict.isChecked()) subjects.append(ict.getText().toString()+" ");
 
-                    final Tutor tutor = new Tutor(name.toString(),age.getText().toString(),location.toString(),subjects.toString());
+                    tutor = new Tutor(name.toString(),age.getText().toString(),location.toString(),subjects.toString());
 
                     mAuth.createUserWithEmailAndPassword(username.getText().toString(), password.getText().toString())
                             .addOnCompleteListener( new OnCompleteListener<AuthResult>() {
@@ -113,9 +114,18 @@ public class Registration_page extends AppCompatActivity {
                                 public void onComplete(@NonNull Task<AuthResult> task) {
                                     if (task.isSuccessful()) {
 
-                                        saveData(tutor);
+                                        String key = databaseReference.push().getKey();
+                                        databaseReference.child(key).setValue(tutor);
+
                                         progressBar.setVisibility(View.INVISIBLE);
                                         Toast.makeText(getApplicationContext(),"You are Succsessfully registered",Toast.LENGTH_SHORT).show();
+
+                                        firstname.setText("");
+                                        lastname.setText("");
+                                        age.setText("");
+                                        username.setText("");
+                                        password.setText("");
+
                                         Intent intent = new Intent(getApplicationContext(),New_profile.class);
                                         startActivity(intent);
                                     }
@@ -177,11 +187,8 @@ public class Registration_page extends AppCompatActivity {
         }).start();
     }
 
-    void saveData(Tutor tutor)
-    {
-       String key = databaseReference.push().getKey();
-        databaseReference.child(key).setValue(tutor);
-    }
+
+
 
 
 

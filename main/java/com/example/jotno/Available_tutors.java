@@ -1,55 +1,105 @@
 package com.example.jotno;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
-import java.util.ArrayList;
-import java.util.Vector;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
-import static com.example.jotno.R.id.mottos;
-import static com.example.jotno.R.id.names;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import java.util.ArrayList;
 
 public class Available_tutors extends AppCompatActivity {
 
-
-   ArrayList<String> tutors;
-   ArrayList<String> locations;
-
-
-
+    private ArrayList<Tutor> tutors=new ArrayList<Tutor>();
+    private ListView listView;
+    private CustomAdapter customAdapter;
+    private DatabaseReference databaseReference ;
+    private ProgressBar progressBar;
+    private int progressStatus=0;
+    private Handler handler;
 
 
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        tutors= getIntent().getStringArrayListExtra("names");
-        locations=getIntent().getStringArrayListExtra("locations");
-
-
-
         setContentView(R.layout.activity_available_tutors);
-        ListView names=(ListView) findViewById(R.id.names);
+        super.onCreate(savedInstanceState);
+        listView=(ListView)findViewById(R.id.names);
+        databaseReference=FirebaseDatabase.getInstance().getReference("Tutor information");
 
-        final CustomAdapter adapter= new CustomAdapter(this,tutors,locations);
-        names.setAdapter(adapter);
-        names.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                 ArrayList<String> information=adapter.getItem(i);
-                 String Name=information.get(0);
-                 String Location=information.get(1);
-                 Intent intent = new Intent(Available_tutors.this,Tutor_profile.class);
-                 intent.putExtra("name",Name);
-                 intent.putExtra("location",Location);
-                 startActivity(intent);
+        handler = new Handler();
+
+        onStart();
+
+
+
+   }
+
+    @Override
+    protected void onStart() {
+
+
+
+
+       databaseReference.addValueEventListener(new ValueEventListener() {
+           @Override
+           public void onDataChange( DataSnapshot snapshot) {
+               tutors.clear();
+           //   setContentView(R.layout.activity_data__loading__screen);
+               for( DataSnapshot dataSnapshot: snapshot.getChildren() )
+               {
+                   Tutor tutor = dataSnapshot.getValue(Tutor.class);
+                   tutors.add(tutor);
+               }
+
+           //    setContentView(R.layout.activity_available_tutors);
+               customAdapter= new CustomAdapter(Available_tutors.this,tutors);
+               listView.setAdapter(customAdapter);
+
+               Toast.makeText(Available_tutors.this,"Your Tutors are here",Toast.LENGTH_SHORT).show();
+
+           }
+
+           @Override
+           public void onCancelled(@NonNull DatabaseError error) {
+                      Toast.makeText(Available_tutors.this,"Error occured",Toast.LENGTH_SHORT).show();
+           }
+       });
+
+        super.onStart();
+    }
+
+    public void runProgressbar()
+    {
+        new Thread(new Runnable() {
+            public void run() {
+
+                while (progressStatus < 10000) {
+                    progressStatus += 4;
+                    //Update progress bar with completion of operation
+                    handler.post(new Runnable() {
+                        public void run() {
+                            progressBar.setProgress(progressStatus);
+                        }
+                    });
+                    try {
+                        // Sleep for 300 milliseconds.
+                        //Just to display the progress slowly
+                        Thread.sleep(300);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
             }
-        });
-
+        }).start();
     }
 }
