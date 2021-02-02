@@ -1,11 +1,6 @@
 package com.example.jotno;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
@@ -18,11 +13,16 @@ import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthUserCollisionException;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class Registration_page extends AppCompatActivity {
 
@@ -39,6 +39,7 @@ public class Registration_page extends AppCompatActivity {
    private ProgressBar progressBar;
    private int progressStatus=0;
    private Handler handler;
+   private DatabaseReference databaseReference;
 
 
  //   TextView lastsavedinfo;
@@ -49,6 +50,7 @@ public class Registration_page extends AppCompatActivity {
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registration_page);
+
 
         handler = new Handler();
         progressBar = (ProgressBar)findViewById(R.id.load);
@@ -71,6 +73,8 @@ public class Registration_page extends AppCompatActivity {
         CustomAdaptar2 adaptar2= new CustomAdaptar2(this,location_names);
         locations.setAdapter(adaptar2);
         mAuth=FirebaseAuth.getInstance();
+        databaseReference = FirebaseDatabase.getInstance().getReference();
+
 
         next.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -89,21 +93,38 @@ public class Registration_page extends AppCompatActivity {
 
                     progressBar.setVisibility(View.VISIBLE);
                     runProgressbar();
+                    StringBuilder name = new StringBuilder() ;
+                    StringBuilder location = new StringBuilder();
+                    StringBuilder subjects = new StringBuilder();
+                    name.append(firstname.getText().toString()+" ");
+                    name.append(lastname.getText().toString());
+                    location.append(locations.getSelectedItem().toString());
+
+                    if(math.isChecked()) subjects.append(math.getText().toString()+"\n");
+                    if(phy.isChecked()) subjects.append(phy.getText().toString()+"\n");
+                    if(chem.isChecked()) subjects.append(chem.getText().toString()+"\n");
+                    if(ict.isChecked()) subjects.append(ict.getText().toString()+"\n");
+
+                    final Tutor tutor = new Tutor(name.toString(),age.getText().toString(),location.toString(),subjects.toString());
 
                     mAuth.createUserWithEmailAndPassword(username.getText().toString(), password.getText().toString())
                             .addOnCompleteListener( new OnCompleteListener<AuthResult>() {
                                 @Override
                                 public void onComplete(@NonNull Task<AuthResult> task) {
                                     if (task.isSuccessful()) {
-                                        progressBar.setVisibility(View.INVISIBLE);
-                                       Toast.makeText(getApplicationContext(),"Succsess",Toast.LENGTH_SHORT).show();
 
+                                        saveData(tutor);
+                                        progressBar.setVisibility(View.INVISIBLE);
+                                        Toast.makeText(getApplicationContext(),"You are Succsessfully registered",Toast.LENGTH_SHORT).show();
+                                        Intent intent = new Intent(getApplicationContext(),New_profile.class);
+                                        startActivity(intent);
                                     }
                                     else if(task.getException() instanceof FirebaseAuthUserCollisionException){
                                         progressBar.setVisibility(View.INVISIBLE);
                                         Toast.makeText(getApplicationContext(),"User is already registered",Toast.LENGTH_SHORT).show();
                                     }
                                     else {
+                                        progressBar.setVisibility(View.INVISIBLE);
                                         Toast.makeText(getApplicationContext(),"Failed",Toast.LENGTH_SHORT).show();
                                     }
 
@@ -135,7 +156,8 @@ public class Registration_page extends AppCompatActivity {
     {
         new Thread(new Runnable() {
             public void run() {
-                while (progressStatus < 100) {
+
+             while (progressStatus < 100) {
                     progressStatus += 4;
                     //Update progress bar with completion of operation
                     handler.post(new Runnable() {
@@ -155,6 +177,11 @@ public class Registration_page extends AppCompatActivity {
         }).start();
     }
 
+    void saveData(Tutor tutor)
+    {
+       String key = databaseReference.push().getKey();
+        databaseReference.child(key).setValue(tutor);
+    }
 
 
 
