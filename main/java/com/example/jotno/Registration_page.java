@@ -24,7 +24,7 @@ import com.google.firebase.auth.FirebaseAuthUserCollisionException;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class Registration_page extends AppCompatActivity {
+public class Registration_page extends AppCompatActivity implements View.OnClickListener {
 
    private Button next,load,store;
    private RadioGroup gender;
@@ -75,88 +75,7 @@ public class Registration_page extends AppCompatActivity {
         locations.setAdapter(adaptar2);
         mAuth=FirebaseAuth.getInstance();
         databaseReference = FirebaseDatabase.getInstance().getReference("Tutor information");
-
-
-        next.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-         if(firstname.getText().toString().matches("")||lastname.getText().toString().matches("")||age.getText().toString().matches(""))
-             Toast.makeText(Registration_page.this,"please provide ur information",Toast.LENGTH_SHORT).show();
-         else
-         {
-             if(gender.getCheckedRadioButtonId()!=-1)
-             {
-
-
-                if(math.isChecked()||chem.isChecked()||phy.isChecked()||ict.isChecked())
-                {
-
-                    progressBar.setVisibility(View.VISIBLE);
-                    runProgressbar();
-                    StringBuilder name = new StringBuilder() ;
-                    StringBuilder location = new StringBuilder();
-                    StringBuilder subjects = new StringBuilder();
-                    name.append(firstname.getText().toString()+" ");
-                    name.append(lastname.getText().toString());
-                    location.append(locations.getSelectedItem().toString());
-
-                    if(math.isChecked()) subjects.append(math.getText().toString()+" ");
-                    if(phy.isChecked()) subjects.append(phy.getText().toString()+" ");
-                    if(chem.isChecked()) subjects.append(chem.getText().toString()+" ");
-                    if(ict.isChecked()) subjects.append(ict.getText().toString()+" ");
-
-                    tutor = new Tutor(name.toString(),age.getText().toString(),location.toString(),subjects.toString());
-
-                    mAuth.createUserWithEmailAndPassword(username.getText().toString(), password.getText().toString())
-                            .addOnCompleteListener( new OnCompleteListener<AuthResult>() {
-                                @Override
-                                public void onComplete(@NonNull Task<AuthResult> task) {
-                                    if (task.isSuccessful()) {
-
-                                        String key = databaseReference.push().getKey();
-                                        databaseReference.child(key).setValue(tutor);
-
-                                        progressBar.setVisibility(View.INVISIBLE);
-                                        Toast.makeText(getApplicationContext(),"You are Succsessfully registered",Toast.LENGTH_SHORT).show();
-
-                                        firstname.setText("");
-                                        lastname.setText("");
-                                        age.setText("");
-                                        username.setText("");
-                                        password.setText("");
-
-                                        Intent intent = new Intent(getApplicationContext(),New_profile.class);
-                                        startActivity(intent);
-                                    }
-                                    else if(task.getException() instanceof FirebaseAuthUserCollisionException){
-                                        progressBar.setVisibility(View.INVISIBLE);
-                                        Toast.makeText(getApplicationContext(),"User is already registered",Toast.LENGTH_SHORT).show();
-                                    }
-                                    else {
-                                        progressBar.setVisibility(View.INVISIBLE);
-                                        Toast.makeText(getApplicationContext(),"Failed",Toast.LENGTH_SHORT).show();
-                                    }
-
-
-                                }
-                            });
-
-
-
-
-                }
-                else Toast.makeText(Registration_page.this,"please provide ur information",Toast.LENGTH_SHORT).show();
-             }else Toast.makeText(Registration_page.this,"please provide ur information",Toast.LENGTH_SHORT).show();
-
-
-
-         }
-
-            }
-        });
-
-
+        next.setOnClickListener(this);
 
 
 
@@ -188,8 +107,86 @@ public class Registration_page extends AppCompatActivity {
     }
 
 
+    @Override
+    public void onClick(View view) {
+        switch (view.getId())
+        {
+            case R.id.next:
+
+                if(firstname.getText().toString().matches("")||lastname.getText().toString().matches("")||age.getText().toString().matches(""))
+                    Toast.makeText(Registration_page.this,"please provide ur information",Toast.LENGTH_SHORT).show();
+                else
+                {
+                    if(gender.getCheckedRadioButtonId()!=-1)
+                    {
+
+
+                        if(math.isChecked()||chem.isChecked()||phy.isChecked()||ict.isChecked())
+                        {
+
+                            progressBar.setVisibility(View.VISIBLE);
+                            runProgressbar();
+                            StringBuilder name = new StringBuilder() ;
+                            StringBuilder location = new StringBuilder();
+                            StringBuilder subjects = new StringBuilder();
+                            name.append(firstname.getText().toString()+" ");
+                            name.append(lastname.getText().toString());
+                            location.append(locations.getSelectedItem().toString());
+
+                            if(math.isChecked()) subjects.append(math.getText().toString()+" ");
+                            if(phy.isChecked()) subjects.append(phy.getText().toString()+" ");
+                            if(chem.isChecked()) subjects.append(chem.getText().toString()+" ");
+                            if(ict.isChecked()) subjects.append(ict.getText().toString()+" ");
+
+                            tutor = new Tutor(name.toString(),age.getText().toString(),location.toString(),subjects.toString(),username.getText().toString());
+
+                            mAuth.createUserWithEmailAndPassword(username.getText().toString(), password.getText().toString())
+                                    .addOnCompleteListener( new OnCompleteListener<AuthResult>() {
+                                        @Override
+                                        public void onComplete(@NonNull Task<AuthResult> task) {
+                                            if (task.isSuccessful()) {
+
+                                                String key = databaseReference.push().getKey();
+                                                databaseReference.child(key).setValue(tutor);
+
+                                                progressBar.setVisibility(View.INVISIBLE);
+                                                Toast.makeText(getApplicationContext(),"You are Succsessfully registered",Toast.LENGTH_SHORT).show();
+
+                                                firstname.setText("");
+                                                lastname.setText("");
+                                                age.setText("");
+                                                username.setText("");
+                                                password.setText("");
+
+                                                Intent intent = new Intent(Registration_page.this,New_profile.class);
+                                                startActivity(intent);
+                                                finish();
+                                            }
+                                            else if(task.getException() instanceof FirebaseAuthUserCollisionException){
+                                                progressBar.setVisibility(View.INVISIBLE);
+                                                Toast.makeText(getApplicationContext(),"User is already registered",Toast.LENGTH_SHORT).show();
+                                            }
+                                            else {
+                                                progressBar.setVisibility(View.INVISIBLE);
+                                                Toast.makeText(getApplicationContext(),"Failed",Toast.LENGTH_SHORT).show();
+                                            }
+
+
+                                        }
+                                    });
 
 
 
 
+                        }
+                        else Toast.makeText(Registration_page.this,"please provide ur information",Toast.LENGTH_SHORT).show();
+                    }else Toast.makeText(Registration_page.this,"please provide ur information",Toast.LENGTH_SHORT).show();
+
+
+
+                }
+
+                break;
+        }
+    }
 }

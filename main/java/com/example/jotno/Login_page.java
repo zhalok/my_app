@@ -73,7 +73,10 @@ public class Login_page extends AppCompatActivity {
                                               progressBar.setVisibility(View.INVISIBLE);
                                               Toast.makeText(getApplicationContext(),"Sign in Successful",Toast.LENGTH_SHORT).show();
                                               Intent intent = new Intent(getApplicationContext(),New_profile.class);
+                                              intent.putExtra("email",username.getText().toString());
                                               startActivity(intent);
+                                              username.setText("");
+                                              password.setText("");
 
 
 

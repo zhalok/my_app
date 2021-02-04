@@ -35,48 +35,57 @@ public class Available_tutors extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         listView=(ListView)findViewById(R.id.names);
         databaseReference=FirebaseDatabase.getInstance().getReference("Tutor information");
-
         handler = new Handler();
-
-        onStart();
-
-
-
-   }
-
-    @Override
-    protected void onStart() {
+        showData();
 
 
 
 
-       databaseReference.addValueEventListener(new ValueEventListener() {
-           @Override
-           public void onDataChange( DataSnapshot snapshot) {
-               tutors.clear();
-           //   setContentView(R.layout.activity_data__loading__screen);
-               for( DataSnapshot dataSnapshot: snapshot.getChildren() )
-               {
-                   Tutor tutor = dataSnapshot.getValue(Tutor.class);
-                   tutors.add(tutor);
-               }
 
-           //    setContentView(R.layout.activity_available_tutors);
-               customAdapter= new CustomAdapter(Available_tutors.this,tutors);
-               listView.setAdapter(customAdapter);
-
-               Toast.makeText(Available_tutors.this,"Your Tutors are here",Toast.LENGTH_SHORT).show();
-
-           }
-
-           @Override
-           public void onCancelled(@NonNull DatabaseError error) {
-                      Toast.makeText(Available_tutors.this,"Error occured",Toast.LENGTH_SHORT).show();
-           }
-       });
-
-        super.onStart();
     }
+
+    void showData()
+    {
+        databaseReference.addValueEventListener(new ValueEventListener() {
+
+
+            public void onDataChange( DataSnapshot snapshot) {
+                tutors.clear();
+                //   setContentView(R.layout.activity_data__loading__screen);
+                for( DataSnapshot dataSnapshot: snapshot.getChildren() )
+                {
+                    Tutor tutor = dataSnapshot.getValue(Tutor.class);
+                    tutors.add(tutor);
+                }
+
+                //    setContentView(R.layout.activity_available_tutors);
+                if(tutors.size()==0)
+                {
+                    Toast.makeText(getApplicationContext(),"There are no tutors available sorry",Toast.LENGTH_SHORT).show();
+                    finish();
+
+                }
+                else {
+                    customAdapter = new CustomAdapter(Available_tutors.this, tutors);
+                    listView.setAdapter(customAdapter);
+
+                    Toast.makeText(Available_tutors.this, "Your Tutors are here", Toast.LENGTH_SHORT).show();
+                }
+
+            }
+
+
+            public void onCancelled(@NonNull DatabaseError error) {
+                Toast.makeText(Available_tutors.this,"Error occured",Toast.LENGTH_SHORT).show();
+            }
+        });
+
+    }
+
+
+
+
+
 
     public void runProgressbar()
     {

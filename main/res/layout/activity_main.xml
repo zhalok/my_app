@@ -4,24 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="20dp"
+    android:padding="70dp"
     android:orientation="vertical"
     android:background="@color/color_of_starting_page"
     tools:context=".MainActivity">
 
-<ScrollView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
->
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        >
 
         <ImageView
-            android:layout_marginTop="25dp"
+
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_gravity="center"
@@ -39,7 +30,7 @@
         <Button
 
             android:id="@+id/login_button"
-            android:layout_width="200dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:drawableLeft="@drawable/profile"
@@ -53,12 +44,12 @@
 
         <Button
             android:id="@+id/look_button"
-            android:layout_width="200dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:drawableLeft="@drawable/s32"
             android:textAllCaps="false"
-            android:text=" Look for tution"
+            android:text="Look for tution"
             android:padding="20dp"
             android:layout_marginTop="20dp"
             style="@style/Widget.AppCompat.Toolbar"  />
@@ -70,11 +61,6 @@
 
 
 
-
-    </LinearLayout>
-
-
-</ScrollView>
 
 
 

@@ -5,13 +5,15 @@ public class Tutor {
   private String age;
   private String location;
   private String subject;
+  private String email;
 
-  public Tutor(String name,String age,String location,String subject)
+  public Tutor(String name,String age,String location,String subject,String email)
   {
       this.name=name;
       this.age=age;
       this.location=location;
       this.subject=subject;
+      this.email=email;
   }
   public Tutor()
   {
@@ -37,6 +39,14 @@ public class Tutor {
    {
        return subject;
    }
+
+   public String getEmail(){return email;}
+
+   public void setLocation(String location)
+   {
+       this.location=location;
+   }
+
 
 
 
