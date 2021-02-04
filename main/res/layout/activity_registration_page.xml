@@ -53,8 +53,26 @@
                 android:hint="age"
                 android:inputType="number"
                 />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Institute"
+                android:id="@+id/institute"
+
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Department"
+                android:id="@+id/department"
+
+                />
+
+
          <EditText
-             android:id="@+id/username"
+             android:id="@+id/email"
              android:layout_width="match_parent"
              android:layout_height="wrap_content"
              android:hint="Email"

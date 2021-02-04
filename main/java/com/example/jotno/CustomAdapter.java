@@ -53,12 +53,17 @@ public class CustomAdapter extends BaseAdapter {
 
 
         TextView namess=(TextView) view.findViewById(R.id.sample_view);
-        TextView subjects=(TextView) view.findViewById(R.id.mottos);
+        TextView department=(TextView) view.findViewById(R.id.mottos);
+        TextView institute=(TextView)view.findViewById(R.id.institute);
         String name=tutor.get(i).getName();
-        String subject=tutor.get(i).getSubject();
+        String tinstitue=tutor.get(i).getInstitute();
+        String tdepartment=tutor.get(i).getDepartment();
+
+
 
         namess.setText(name);
-        subjects.setText(subject);
+        department.setText(tdepartment);
+        institute.setText(tinstitue);
 
 
         //imageView.setImageResource(imgs[i]);

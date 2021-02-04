@@ -29,7 +29,7 @@ public class Registration_page extends AppCompatActivity implements View.OnClick
    private Button next,load,store;
    private RadioGroup gender;
    private CheckBox math,phy,chem,ict;
-   private EditText firstname,lastname,age;
+   private EditText firstname,lastname,age,institute,department;
    private RadioButton male,female;
    private Spinner locations;
    private String[] location_names;
@@ -54,10 +54,12 @@ public class Registration_page extends AppCompatActivity implements View.OnClick
 
 
         handler = new Handler();
+        institute=(EditText)findViewById(R.id.institute);
+        department=(EditText)findViewById(R.id.department);
         progressBar = (ProgressBar)findViewById(R.id.load);
         next=(Button)findViewById(R.id.next);
         //store=(Button)findViewById(R.id.store);
-        username=(EditText)findViewById((R.id.username));
+        username=(EditText)findViewById((R.id.email));
         password=(EditText)findViewById((R.id.password));
         gender=(RadioGroup)findViewById(R.id.gender);
         firstname=(EditText)findViewById(R.id.fname);
@@ -138,7 +140,7 @@ public class Registration_page extends AppCompatActivity implements View.OnClick
                             if(chem.isChecked()) subjects.append(chem.getText().toString()+" ");
                             if(ict.isChecked()) subjects.append(ict.getText().toString()+" ");
 
-                            tutor = new Tutor(name.toString(),age.getText().toString(),location.toString(),subjects.toString(),username.getText().toString());
+                            tutor = new Tutor(name.toString(),age.getText().toString(),location.toString(),subjects.toString(),username.getText().toString(),institute.getText().toString(),department.getText().toString());
 
                             mAuth.createUserWithEmailAndPassword(username.getText().toString(), password.getText().toString())
                                     .addOnCompleteListener( new OnCompleteListener<AuthResult>() {
@@ -157,6 +159,7 @@ public class Registration_page extends AppCompatActivity implements View.OnClick
                                                 age.setText("");
                                                 username.setText("");
                                                 password.setText("");
+                                                institute.setText("");
 
                                                 Intent intent = new Intent(Registration_page.this,New_profile.class);
                                                 startActivity(intent);
