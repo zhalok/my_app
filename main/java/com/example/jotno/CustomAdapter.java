@@ -1,39 +1,36 @@
 package com.example.jotno;
 
 import android.content.Context;
-import android.content.res.Resources;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
-import java.util.zip.Inflater;
 
 public class CustomAdapter extends BaseAdapter {
 
-    ArrayList<Tutor> tutor;
+    ArrayList<Tutor> tutors;
     Context context;
 
-    CustomAdapter(Context context, ArrayList<Tutor>tutor)
+    CustomAdapter(Context context, ArrayList<Tutor>tutors)
     {
         this.context=context;
-        this.tutor=tutor;
+        this.tutors=tutors;
 
 
     }
 
 
     public int getCount() {
-        return tutor.size();
+        return tutors.size();
     }
 
     @Override
-    public Object getItem(int i) {
+    public Tutor getItem(int i) {
 
-     return null;
+     return tutors.get((i));
     }
 
     @Override
@@ -55,9 +52,9 @@ public class CustomAdapter extends BaseAdapter {
         TextView namess=(TextView) view.findViewById(R.id.sample_view);
         TextView department=(TextView) view.findViewById(R.id.mottos);
         TextView institute=(TextView)view.findViewById(R.id.institute);
-        String name=tutor.get(i).getName();
-        String tinstitue=tutor.get(i).getInstitute();
-        String tdepartment=tutor.get(i).getDepartment();
+        String name=tutors.get(i).getName();
+        String tinstitue=tutors.get(i).getInstitute();
+        String tdepartment=tutors.get(i).getDepartment();
 
 
 

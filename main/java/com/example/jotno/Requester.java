@@ -5,6 +5,15 @@ public class Requester {
     private String name;
     private String number;
 
+    Requester(String name,String number)
+    {
+        this.name=name;
+        this.number=number;
+    }
+
+    Requester(){}
+
+
     public void setName(String name)
 
     {
@@ -16,7 +25,7 @@ public class Requester {
         this.number=number;
     }
 
-    public String getname()
+    public String getName()
     {
         return name;
     }

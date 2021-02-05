@@ -10,7 +10,7 @@ public class Tutor {
   private String email;
   private String institute;
   private String department;
-  private ArrayList<Requester>requests;
+
 
   public Tutor(String name,String age,String location,String subject,String email,String institute,String department)
   {
@@ -53,15 +53,7 @@ public class Tutor {
 
    public String getDepartment() { return department; }
 
-   public ArrayList<Requester> getRequests()
-   {
-       return requests;
-   }
 
-   public void setNewrequest(Requester requester)
-   {
-       requests.add(requester);
-   }
 
    public void setLocation(String location)
    {

@@ -150,6 +150,9 @@ public class Registration_page extends AppCompatActivity implements View.OnClick
 
                                                 String key = databaseReference.push().getKey();
                                                 databaseReference.child(key).setValue(tutor);
+                                                final String email=username.getText().toString();
+
+
 
                                                 progressBar.setVisibility(View.INVISIBLE);
                                                 Toast.makeText(getApplicationContext(),"You are Succsessfully registered",Toast.LENGTH_SHORT).show();

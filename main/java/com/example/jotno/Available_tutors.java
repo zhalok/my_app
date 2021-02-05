@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
@@ -35,7 +36,7 @@ public class Available_tutors extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         listView=(ListView)findViewById(R.id.names);
         databaseReference=FirebaseDatabase.getInstance().getReference("Tutor information");
-        handler = new Handler();
+
         showData();
 
 
@@ -68,6 +69,15 @@ public class Available_tutors extends AppCompatActivity {
                 else {
                     customAdapter = new CustomAdapter(Available_tutors.this, tutors);
                     listView.setAdapter(customAdapter);
+                    listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                        @Override
+                        public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                               Tutor tutor = customAdapter.getItem(i);
+                               Intent intent = new Intent(Available_tutors.this,Student_Information.class);
+                               intent.putExtra("tutor_email",tutor.getEmail());
+                               startActivity(intent);
+                        }
+                    });
 
                     Toast.makeText(Available_tutors.this, "Your Tutors are here", Toast.LENGTH_SHORT).show();
                 }
@@ -87,28 +97,4 @@ public class Available_tutors extends AppCompatActivity {
 
 
 
-    public void runProgressbar()
-    {
-        new Thread(new Runnable() {
-            public void run() {
-
-                while (progressStatus < 10000) {
-                    progressStatus += 4;
-                    //Update progress bar with completion of operation
-                    handler.post(new Runnable() {
-                        public void run() {
-                            progressBar.setProgress(progressStatus);
-                        }
-                    });
-                    try {
-                        // Sleep for 300 milliseconds.
-                        //Just to display the progress slowly
-                        Thread.sleep(300);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
-                }
-            }
-        }).start();
-    }
 }
