@@ -4,6 +4,7 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteException;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.widget.Toast;
 
@@ -27,7 +28,7 @@ public class Database extends SQLiteOpenHelper {
 
     public Database(Context context) {
         super(context, DB_NAME, null, VERSION);
-        this.context=context;
+        this.context = context;
 
     }
 //hiiiiiiiiiiiiiiii
@@ -76,7 +77,7 @@ public class Database extends SQLiteOpenHelper {
 
     public Cursor getData(SQLiteDatabase sqLiteDatabase)
     {
-        Cursor cursor = sqLiteDatabase.rawQuery(SELECT,null);
+        Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM Tutor_info",null);
         return cursor;
 
     }
