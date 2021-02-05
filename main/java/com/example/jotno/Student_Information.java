@@ -40,7 +40,7 @@ public class Student_Information extends AppCompatActivity implements View.OnCli
         tutor_email=getIntent().getStringExtra("tutor_email");
         student_name=(EditText)findViewById(R.id.student_name);
         student_phone=(EditText)findViewById(R.id.student_phone);
-        databaseReference= FirebaseDatabase.getInstance().getReference("Tutor information");
+        databaseReference= FirebaseDatabase.getInstance().getReference("Student Information");
         send_request=(Button)findViewById(R.id.send_request);
         send_request.setOnClickListener(this);
 
@@ -60,9 +60,9 @@ public class Student_Information extends AppCompatActivity implements View.OnCli
                 }
                 else
                 {
-                    Requester requester = new Requester(student_name.getText().toString(),student_phone.getText().toString());
-                    runProgressbar();
-                    set_Request(tutor_email,requester);
+                    Requester requester = new Requester(student_name.getText().toString(),student_phone.getText().toString(),tutor_email);
+
+                    set_Request(requester);
 
 
                 }
@@ -72,33 +72,17 @@ public class Student_Information extends AppCompatActivity implements View.OnCli
         }
     }
 
-    private void set_Request(final String tutor_email, final Requester requester)
+    private void set_Request(Requester requester)
     {
-        databaseReference.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                progressBar.setVisibility(View.VISIBLE);
-                for(DataSnapshot dataSnapshot:snapshot.getChildren())
-                {
-                    Tutor tutor =dataSnapshot.getValue(Tutor.class);
-                    if(tutor.getEmail().matches(tutor_email))
-                    {
 
-                        String key=dataSnapshot.getKey();
-                        databaseReference.child(key).setValue(tutor);
-                        progressBar.setVisibility(View.INVISIBLE);
-                        Toast.makeText(getApplicationContext(),"Request Sent Successfully",Toast.LENGTH_SHORT).show();
-                        return ;
-                    }
-                }
+        runProgressbar();
+       progressBar.setVisibility(View.VISIBLE);
+       String key=databaseReference.push().getKey();
+       databaseReference.child(key).setValue(requester);
+       progressBar.setVisibility(View.INVISIBLE);
+       Toast.makeText(getApplicationContext(),"Request Sent",Toast.LENGTH_SHORT).show();
+        finish();
 
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
-            }
-        });
     }
 
     public void runProgressbar()

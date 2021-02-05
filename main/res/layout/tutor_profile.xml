@@ -5,8 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
-
+    android:background="@color/color_of_starting_page"
     tools:context=".Tutor_profile">
 
 
@@ -17,41 +16,60 @@
        android:layout_width="match_parent"
        android:layout_height="match_parent"
        android:orientation="vertical"
-       android:padding="20dp">
+       android:padding="60dp">
 
+       <ProgressBar
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_gravity="center"
+           android:id="@+id/loading"
+           />
 
       <TextView
           android:id="@+id/tutor_name"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-          android:layout_marginTop="20dp"
           android:layout_gravity="center"
           android:textSize="20dp"
           style="@style/Widget.AppCompat.Toolbar"
-          android:text="ABDUL KADER AKASH"
-          android:textColor="@color/color_of_starting_page"
+
+
 
           />
        <TextView
-           android:id="@+id/Tutor_location"
+           android:id="@+id/tutor_institute"
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
-           android:text="SUST CSE"
            android:layout_gravity="center"
            style="bold"
            android:textSize="20dp"
 
            />
 
-       <Button
+       <TextView
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
            android:layout_gravity="center"
-           android:layout_marginTop="200dp"
-           android:text="Delete profile"
-           android:textAllCaps="false"
-           style="@style/Widget.AppCompat.PopupMenu"
+           android:id="@+id/tutor_department"
 
+           />
+
+       <Button
+           android:id="@+id/view_requests"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_gravity="center"
+           android:layout_marginTop="100dp"
+           android:text="View Requests"
+           style="@style/Widget.AppCompat.Toolbar"
+           />
+
+       <Button
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="20dp"
+           android:text="Update Profile"
+           style="@style/Widget.AppCompat.Toolbar"
            />
 
 

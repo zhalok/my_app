@@ -54,7 +54,7 @@ public class Login_page extends AppCompatActivity {
 
            public void onClick(View view) {
 
-                  if(username.getText().toString().matches("")) {
+                  if(username.getText().toString().matches("")||password.getText().toString().matches("")) {
                       Toast.makeText(Login_page.this,"please provide the username",Toast.LENGTH_SHORT).show();
 
                   }
@@ -74,7 +74,7 @@ public class Login_page extends AppCompatActivity {
 
                                               progressBar.setVisibility(View.INVISIBLE);
                                               Toast.makeText(getApplicationContext(),"Sign in Successful",Toast.LENGTH_SHORT).show();
-                                              Intent intent = new Intent(getApplicationContext(),New_profile.class);
+                                              Intent intent = new Intent(getApplicationContext(),Tutor_profile.class);
                                               intent.putExtra("email",username.getText().toString());
                                               startActivity(intent);
                                               username.setText("");
