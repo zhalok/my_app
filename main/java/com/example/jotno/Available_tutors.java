@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
@@ -20,7 +22,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
-public class Available_tutors extends AppCompatActivity {
+public class Available_tutors extends AppCompatActivity implements View.OnClickListener {
 
     private ArrayList<Tutor> tutors=new ArrayList<Tutor>();
     private ListView listView;
@@ -29,19 +31,21 @@ public class Available_tutors extends AppCompatActivity {
     private ProgressBar progressBar;
     private int progressStatus=0;
     private Handler handler;
+    private EditText search;
+    private Button search_button,reload_button;
 
 
     protected void onCreate(Bundle savedInstanceState) {
         setContentView(R.layout.activity_available_tutors);
         super.onCreate(savedInstanceState);
         listView=(ListView)findViewById(R.id.names);
+        search=(EditText)findViewById(R.id.search_tutor);
+        search_button=(Button)findViewById(R.id.s_button);
+        reload_button=(Button)findViewById(R.id.reload_button);
+        reload_button.setOnClickListener(this);
         databaseReference=FirebaseDatabase.getInstance().getReference("Tutor information");
-
+        search_button.setOnClickListener(this);
         showData();
-
-
-
-
 
     }
 
@@ -92,9 +96,65 @@ public class Available_tutors extends AppCompatActivity {
 
     }
 
+    void find_data(final String location)
+    {
+        databaseReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                tutors.clear();
+                for(DataSnapshot dataSnapshot:snapshot.getChildren())
+                {
+                    Tutor tutor = dataSnapshot.getValue(Tutor.class);
+                    if(tutor.getLocation().matches(location))
+                    {
+                        tutors.add(tutor);
+                    }
+                }
+                if(tutors.size()==0)
+                {
+                    customAdapter = new CustomAdapter(Available_tutors.this, tutors);
+                    listView.setAdapter(customAdapter);
+                    Toast.makeText(getApplicationContext(),"No tutors are here",Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    Toast.makeText(getApplicationContext(),"Here are your tutors",Toast.LENGTH_SHORT).show();
+                    customAdapter = new CustomAdapter(Available_tutors.this, tutors);
+                    listView.setAdapter(customAdapter);
+
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+    }
 
 
+    @Override
+    public void onClick(View view) {
+        switch (view.getId())
+        {
+            case R.id.s_button:
+
+                String searched_location=search.getText().toString();
+                if(searched_location.matches(""))
+                {
+                    Toast.makeText(getApplicationContext(),"Please provide a loation",Toast.LENGTH_SHORT).show();
+                }
+                else {
+
+                    find_data(searched_location);
 
 
+                }
 
+                break;
+
+            case R.id.reload_button:
+                showData();
+                break;
+        }
+    }
 }
