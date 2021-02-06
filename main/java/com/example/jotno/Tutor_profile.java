@@ -39,7 +39,6 @@ import java.util.ArrayList;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.tutor_profile);
-        Toast.makeText(getApplicationContext(),tutor_email,Toast.LENGTH_SHORT).show();
         tutor_email=getIntent().getStringExtra("email");
         databaseReference = FirebaseDatabase.getInstance().getReference("Tutor information");
         name=(TextView)findViewById(R.id.tutor_name);

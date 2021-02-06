@@ -12,7 +12,7 @@ import java.util.zip.Inflater;
 
 public class CustomAdapter3 extends BaseAdapter {
 
-    ArrayList<Requester>requesters;
+    ArrayList<Requester>requesters=new ArrayList<Requester>();
     Context context;
 
      CustomAdapter3(Context context,ArrayList<Requester> requesters)
@@ -46,8 +46,8 @@ public class CustomAdapter3 extends BaseAdapter {
 
         }
 
-        TextView student_name=view.findViewById(R.id.student_name);
-        TextView student_phone=view.findViewById(R.id.student_phone);
+        TextView student_name=(TextView) view.findViewById(R.id.student_name);
+        TextView student_phone=(TextView) view.findViewById(R.id.student_phone);
         student_name.setText(requesters.get(i).getName());
         student_phone.setText(requesters.get(i).getNumber());
 

@@ -5,14 +5,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="20dp"
+    android:background="#E8EAF3"
     tools:context=".Requests">
 
-    <ListView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/requests"
 
-        />
+
+       <ListView
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:id="@+id/requests"
+           android:divider="@color/color_of_starting_page"
+           android:dividerHeight="5dp"
+
+           />
+
+
+
+
 
 </LinearLayout>
