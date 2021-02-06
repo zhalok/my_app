@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "278716433214",
+    "project_id": "jotno-3b1a4",
+    "storage_bucket": "jotno-3b1a4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:278716433214:android:91f96bf04c958ceeb8e26f",
+        "android_client_info": {
+          "package_name": "com.example.jotno"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "278716433214-kjrj7bn4tui1umnt5eeld4jo73vefc4a.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.jotno",
+            "certificate_hash": "54004dbb7414bee9d61cff76724fc85052d8ac04"
+          }
+        },
+        {
+          "client_id": "278716433214-p2m7640f5pjhhgjsubp5grpds7eesqul.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCn2HI2VbHdTBHNEOgB8-iH1rT4aamM0yE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "278716433214-p2m7640f5pjhhgjsubp5grpds7eesqul.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
