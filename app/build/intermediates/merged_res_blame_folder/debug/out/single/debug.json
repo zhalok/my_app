@@ -1,0 +1,334 @@
+[
+    {
+        "merged": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_baseline_assignment_ind_24.png.flat",
+        "source": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_baseline_assignment_ind_24.png"
+    },
+    {
+        "merged": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_s32.png.flat",
+        "source": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\src\\main\\res\\drawable-v24\\s32.png"
+    },
+    {
+        "merged": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_baseline_search_24.png.flat",
+        "source": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_baseline_search_24.png"
+    },
+    {
+        "merged": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_tutor.jpg.flat",
+        "source": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\src\\main\\res\\drawable-v24\\tutor.jpg"
+    },
+    {
+        "merged": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_student__information.xml.flat",
+        "source": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\src\\main\\res\\layout\\activity_student__information.xml"
+    },
+    {
+        "merged": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_aisha.jpg.flat",
+        "source": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\src\\main\\res\\drawable-v24\\aisha.jpg"
+    },
+    {
+        "merged": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\intermediates\\res\\merged\\debug\\layout_sample_view3.xml.flat",
+        "source": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\src\\main\\res\\layout\\sample_view3.xml"
+    },
+    {
+        "merged": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_baseline_search_24.png.flat",
+        "source": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_baseline_search_24.png"
+    },
+    {
+        "merged": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_baseline_assignment_ind_24.png.flat",
+        "source": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_baseline_assignment_ind_24.png"
+    },
+    {
+        "merged": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_launcher_background.png.flat",
+        "source": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_launcher_background.png"
+    },
+    {
+        "merged": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_data_base.xml.flat",
+        "source": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\src\\main\\res\\layout\\activity_data_base.xml"
+    },
+    {
+        "merged": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_registration_page.xml.flat",
+        "source": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\src\\main\\res\\layout\\activity_registration_page.xml"
+    },
+    {
+        "merged": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_baseline_lock_24.png.flat",
+        "source": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_baseline_lock_24.png"
+    },
+    {
+        "merged": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_launcher_background.png.flat",
+        "source": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_launcher_background.png"
+    },
+    {
+        "merged": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_launcher_background.png.flat",
+        "source": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_launcher_background.png"
+    },
+    {
+        "merged": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_profile.xml.flat",
+        "source": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\src\\main\\res\\layout\\activity_profile.xml"
+    },
+    {
+        "merged": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_login_page.xml.flat",
+        "source": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\src\\main\\res\\layout\\activity_login_page.xml"
+    },
+    {
+        "merged": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_baseline_how_to_reg_24.png.flat",
+        "source": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_baseline_how_to_reg_24.png"
+    },
+    {
+        "merged": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_baseline_lock_24.png.flat",
+        "source": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_baseline_lock_24.png"
+    },
+    {
+        "merged": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_baseline_search_24.xml.flat",
+        "source": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_baseline_search_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_baseline_how_to_reg_24.png.flat",
+        "source": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_baseline_how_to_reg_24.png"
+    },
+    {
+        "merged": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_baseline_assignment_ind_24.png.flat",
+        "source": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_baseline_assignment_ind_24.png"
+    },
+    {
+        "merged": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ishrat.jpg.flat",
+        "source": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\src\\main\\res\\drawable-v24\\ishrat.jpg"
+    },
+    {
+        "merged": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_baseline_search_24.png.flat",
+        "source": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_baseline_search_24.png"
+    },
+    {
+        "merged": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_baseline_how_to_reg_24.png.flat",
+        "source": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_baseline_how_to_reg_24.png"
+    },
+    {
+        "merged": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_baseline_local_phone_24.png.flat",
+        "source": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_baseline_local_phone_24.png"
+    },
+    {
+        "merged": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v24_iclauncherforeground.xml.flat",
+        "source": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v24\\iclauncherforeground.xml"
+    },
+    {
+        "merged": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_baseline_search_24.png.flat",
+        "source": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_baseline_search_24.png"
+    },
+    {
+        "merged": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_baseline_assignment_ind_24.png.flat",
+        "source": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_baseline_assignment_ind_24.png"
+    },
+    {
+        "merged": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_launcher_background.png.flat",
+        "source": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_launcher_background.png"
+    },
+    {
+        "merged": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v24_ic_baseline_how_to_reg_24.xml.flat",
+        "source": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v24\\ic_baseline_how_to_reg_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_baseline_assignment_ind_24.xml.flat",
+        "source": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_baseline_assignment_ind_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_available_tutors.xml.flat",
+        "source": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\src\\main\\res\\layout\\activity_available_tutors.xml"
+    },
+    {
+        "merged": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_baseline_lock_24.png.flat",
+        "source": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_baseline_lock_24.png"
+    },
+    {
+        "merged": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\intermediates\\res\\merged\\debug\\layout_sample_view.xml.flat",
+        "source": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\src\\main\\res\\layout\\sample_view.xml"
+    },
+    {
+        "merged": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_updating_.xml.flat",
+        "source": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\src\\main\\res\\layout\\activity_updating_.xml"
+    },
+    {
+        "merged": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_opening_screen.xml.flat",
+        "source": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\src\\main\\res\\layout\\activity_opening_screen.xml"
+    },
+    {
+        "merged": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_baseline_assignment_ind_24.png.flat",
+        "source": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_baseline_assignment_ind_24.png"
+    },
+    {
+        "merged": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_baseline_search_24.png.flat",
+        "source": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_baseline_search_24.png"
+    },
+    {
+        "merged": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_baseline_local_phone_24.png.flat",
+        "source": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_baseline_local_phone_24.png"
+    },
+    {
+        "merged": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_baseline_search_24.png.flat",
+        "source": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_baseline_search_24.png"
+    },
+    {
+        "merged": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_launcher_background.png.flat",
+        "source": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_launcher_background.png"
+    },
+    {
+        "merged": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_baseline_local_phone_24.png.flat",
+        "source": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_baseline_local_phone_24.png"
+    },
+    {
+        "merged": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_baseline_lock_24.png.flat",
+        "source": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_baseline_lock_24.png"
+    },
+    {
+        "merged": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_bookshelf.png.flat",
+        "source": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\src\\main\\res\\drawable-v24\\bookshelf.png"
+    },
+    {
+        "merged": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_baseline_how_to_reg_24.png.flat",
+        "source": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_baseline_how_to_reg_24.png"
+    },
+    {
+        "merged": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_baseline_local_phone_24.png.flat",
+        "source": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_baseline_local_phone_24.png"
+    },
+    {
+        "merged": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\intermediates\\res\\merged\\debug\\layout_tutor_profile.xml.flat",
+        "source": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\src\\main\\res\\layout\\tutor_profile.xml"
+    },
+    {
+        "merged": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_kaifa.jpg.flat",
+        "source": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\src\\main\\res\\drawable-v24\\kaifa.jpg"
+    },
+    {
+        "merged": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_new_profile.xml.flat",
+        "source": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\src\\main\\res\\layout\\activity_new_profile.xml"
+    },
+    {
+        "merged": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_leftarrow.png.flat",
+        "source": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\src\\main\\res\\drawable-v24\\leftarrow.png"
+    },
+    {
+        "merged": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_registration.png.flat",
+        "source": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\src\\main\\res\\drawable-v24\\registration.png"
+    },
+    {
+        "merged": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\intermediates\\res\\merged\\debug\\layout_intermediate.xml.flat",
+        "source": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\src\\main\\res\\layout\\intermediate.xml"
+    },
+    {
+        "merged": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_baseline_lock_24.xml.flat",
+        "source": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_baseline_lock_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_baseline_how_to_reg_24.png.flat",
+        "source": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_baseline_how_to_reg_24.png"
+    },
+    {
+        "merged": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_baseline_local_phone_24.png.flat",
+        "source": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_baseline_local_phone_24.png"
+    },
+    {
+        "merged": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_profile.png.flat",
+        "source": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\src\\main\\res\\drawable-v24\\profile.png"
+    },
+    {
+        "merged": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\intermediates\\res\\merged\\debug\\layout_action_bar_home.xml.flat",
+        "source": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\src\\main\\res\\layout\\action_bar_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_baseline_assignment_ind_24.png.flat",
+        "source": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_baseline_assignment_ind_24.png"
+    },
+    {
+        "merged": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_akashbatash.jpg.flat",
+        "source": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\src\\main\\res\\drawable-v24\\akashbatash.jpg"
+    },
+    {
+        "merged": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\intermediates\\res\\merged\\debug\\layout_sample_view2.xml.flat",
+        "source": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\src\\main\\res\\layout\\sample_view2.xml"
+    },
+    {
+        "merged": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_baseline_local_phone_24.xml.flat",
+        "source": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_baseline_local_phone_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_tui.jpg.flat",
+        "source": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\src\\main\\res\\drawable-v24\\tui.jpg"
+    },
+    {
+        "merged": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_baseline_lock_24.png.flat",
+        "source": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_baseline_lock_24.png"
+    },
+    {
+        "merged": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_launcher_background.png.flat",
+        "source": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_launcher_background.png"
+    },
+    {
+        "merged": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_baseline_how_to_reg_24.png.flat",
+        "source": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_baseline_how_to_reg_24.png"
+    },
+    {
+        "merged": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_baseline_local_phone_24.png.flat",
+        "source": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_baseline_local_phone_24.png"
+    },
+    {
+        "merged": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_requests.xml.flat",
+        "source": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\src\\main\\res\\layout\\activity_requests.xml"
+    },
+    {
+        "merged": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_baseline_lock_24.png.flat",
+        "source": "C:\\Users\\DELL\\AndroidStudioProjects\\my_app\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_baseline_lock_24.png"
+    }
+]
